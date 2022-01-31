@@ -1,0 +1,102 @@
+:root{ 
+    --turquesaAgua: #5EB1BF;
+    --naranjoClaro: #EF7B45; 
+    --naranjomoreclear: #FFA075;
+    --celeste: #CDEDF6;
+    --cafe: #BC5932;
+    --verde: #1E8A46;
+
+}
+
+/* Globales */
+
+* {
+    font-family:'Abril Fatface', Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background-color: var(--naranjomoreclear); */
+    /* background-color: #238ea8; */
+    background: radial-gradient(755px at 10.1% 95.3%, rgb(242, 188, 141) 0%, rgb(242, 159, 141) 100.2%) fixed no-repeat; 
+}
+
+
+/* Tipografia */
+
+
+
+h1, h2 {
+    text-align: center;
+    /* font-family: 'Abril Fatface' , Arial, Helvetica, sans-serif; */
+    
+}
+
+h2 {
+    
+    font-weight: bold;
+    /* font-family: 'Abril Fatface',  Arial, Helvetica, sans-serif; */
+}
+
+span {
+    color: #9A031E;
+    
+}
+
+/* Elementos */
+
+.btn {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+@media (min-width: 280px) {
+    .btn {
+        width: 18rem;
+        
+}
+}
+
+@media (min-width: 700px) {
+    .btn {
+        width: 30rem;
+    
+    }
+    
+}
+
+
+.todos-los-divs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-grammar {
+    background-color: var(--cafe);
+    border-color: #d4683d;
+}
+
+.btn-geo {
+    /* background-color: var(--verde); */
+    /* background-color: #1269A2; */
+    background-color: #E36414;
+    border-color: darkorange;
+}
+
+.btn-pron {
+    /* background-color: var(--turquesaAgua); */
+    /* background-color: #0F4C5C; */
+    background-color: #FB8B24;
+    border-color: orange;
+}
+
+table {
+    border: 1px solid black;
+}
