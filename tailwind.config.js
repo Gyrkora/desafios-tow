@@ -14,10 +14,21 @@ module.exports = {
       },
 
       width: {
-        '80': '80%',
+        '90%' : '90%',
       },
+
       colors: {
-        'custom-yellow':'#BAA333',
+        'rojo-TOW': '#bd1212',
+        'cafe-TOW' : '#E3BA24',
+        'cafe-TOW-O' : '#700000',
+
+        // 'verde-TOW-O' : '#00962B',
+        'verde-TOW-O' : '#44B00B',
+        'verde-TOW-Cl' : '#0EE34A',
+        'celeste-TOW' : '#2499E3',
+        'amarillo-TOW' : '#E3E024',
+        
+
       }  
     },
   },  
@@ -25,28 +36,10 @@ module.exports = {
 }
 
 
-// transparent: 'transparent',
-        // current: 'currentColor',
-     
-        // //nav
-        // 'hover': '#C8EFF8',
-        // 'iconPerfil': '#4B94C1',
-        
+       
         
         // //hero redes sociales
         // 'facebook': '#226EBE',
         // 'instagram': '#F28907',
         // 'compartir': '#A9D941',
         
-        
-        // //Preguntas frecuenes
-        // 'fondoSeccionPreguntas': '#9CC8D9',
-        // 'colortitulo': '#2C3673', //se parece mucho al del footer
-  
-        // //formulario:
-        // 'verdeBoton': '#78BF45',
-        // 'tabs': '#4E98BD',
-        // 'backgroundMain': '#F2F2F2',
-  
-        // //footer
-        // 'moradoFooter': '#2D3073',

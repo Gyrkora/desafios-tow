@@ -13,57 +13,21 @@
 body {
     
     background: rgb(175,130,76);
-    background: linear-gradient(90deg, rgba(175,130,76,1) 0%, rgba(189,18,18,1) 100%, rgba(0,212,255,1) 100%) fixed no-repeat; 
+    background: linear-gradient(90deg, rgba(175,130,76,1) 0%, rgb(219, 95, 95) 100%, rgba(0,212,255,1) 100%) fixed no-repeat; 
 }
 
 
-/* Tipografia */
-span {
-    color: #bd1212;
-    font-weight: bold;
-}
 
 
-.todos-los-divs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    
-}
 
-/* .contenedor-categorias {
-    width: 80%;
-    max-width: 50rem;
-    background-color: white;
-    padding: 10rem 0;
+
+/* .ejemplo {
+
+   
 } */
 
 
-/* Elementos */
-.btn {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-    color: black;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    /* border-color: #d68b6d; */
+    /* border-color: orange; */
 
-
-.btn-grammar {
-    background-color: var(--cafe);
-    border-color: #d68b6d;
-}
-
-.btn-geo {
-    border-color: rgb(236, 173, 95);
-}
-
-.btn-pron {
-    background-color: #FB8B24;
-    border-color: orange;
-}
 
