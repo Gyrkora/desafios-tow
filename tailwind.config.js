@@ -10,7 +10,6 @@ module.exports = {
         '1/4': '25%',
         '1/2': '300px',
         '3/4': '80%',
-        '50' : '50rem',
       },
 
       width: {
@@ -21,7 +20,6 @@ module.exports = {
         'rojo-TOW': '#bd1212',
         'cafe-TOW' : '#E3BA24',
         'cafe-TOW-O' : '#700000',
-
         // 'verde-TOW-O' : '#00962B',
         'verde-TOW-O' : '#44B00B',
         'verde-TOW-Cl' : '#0EE34A',

@@ -10,16 +10,16 @@
 
 /* Globales */
 
+
 body {
-    
-    background: rgb(175,130,76);
+
     background: linear-gradient(90deg, rgba(175,130,76,1) 0%, rgb(219, 95, 95) 100%, rgba(0,212,255,1) 100%) fixed no-repeat; 
 }
 
 
 
 
-
+/* w-4/5 rounded-xl border-2 border-cafe-TOW-O bg-[#f1c3af] transition-all duration-150 ease-in-out */
 
 /* .ejemplo {
 

@@ -7,6 +7,21 @@
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 
+Resolver:
+
+los textos dentro de la tarjeta preguntas, no son responsive -- maxwidh porcentaje
+
+
+Dudas:
+
+require()
+classes
+high order functions
+
+
+
+//////////////////
+
 la stylesheet de tailwind sería esta - https://tailwindcss.com/docs/preflight 
 
 /*
