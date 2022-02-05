@@ -521,22 +521,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mx-auto {
+.card_btns {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
+  margin-top: 0.5rem;
+  max-width: 80%;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(190 132 240 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(112 0 0 / var(--tw-text-opacity));
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .flex {
@@ -549,10 +556,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-4\/5 {
   width: 80%;
-}
-
-.max-w-3\/4 {
-  max-width: 80%;
 }
 
 .flex-col {
@@ -575,17 +578,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 1rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-3xl {
   border-radius: 1.5rem;
-}
-
-.bg-celeste-TOW {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 153 227 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#df9778\] {
@@ -605,16 +599,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .pb-5 {
@@ -652,9 +636,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:border-amarillo-TOW:hover {
+.hover\:border-\[\#BE84F0\]:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(227 224 36 / var(--tw-border-opacity));
+  border-color: rgb(190 132 240 / var(--tw-border-opacity));
 }
 
 .hover\:bg-verde-TOW-O:hover {
@@ -675,6 +659,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-violet-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#CABDF0\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
