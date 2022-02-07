@@ -41,17 +41,14 @@ const respuestasGeo = {
  
 }
   
-
-
-
   //selecting la tarjeta de GEO
   let papaCardGeo = document.querySelector('.papaCardGeo')
   let cardGeo1 = document.querySelector('.cardGeo1');
 
+  
+
 
   //poniendo pregunta adentro DOM
-
-
    class AlDom {
 
     constructor(preguntas) {
@@ -68,26 +65,26 @@ const respuestasGeo = {
   `<div class="btn card_catg flex flex-col items-left py-10">
   <h2 class="font-bold mb-5">${this.preguntas.p0}</h2>
 
-  <div class="flex flex-col items-left gap-5">
+  <div class="flex flex-col items-left gap-5 undiv">
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
     >
-        <p>${this.preguntas.a}</p>
+        <button>${this.preguntas.a}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas"
+      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
     >
-      <h3>${this.preguntas.b}</h3>
+      <butto >${this.preguntas.b}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas correct"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
     >
-      <h3>${this.preguntas.c}</h3>
+      <butto >${this.preguntas.c}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
     >
-      <h3 onclick="" >${this.preguntas.d}</h3>
+      <butt  onclick="" >${this.preguntas.d}</button>
     </div>
 
      <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
@@ -106,13 +103,30 @@ const respuestasGeo = {
 
     }
 
-
   } 
 
  
+  
+
+    //SELECCIONAR BOTONES GENERADOS POR CLASES
+
+
+    let alternativas = document.getElementsByClassName('alternativa');
+    console.log(alternativas);
+
+    
+    //ESCUCHAMOS EL EVENTO 'click' PARA CADA BOTON GENERADO
+    for (const alternativa of alternativas) {
+            alternativa.addEventListener('click', function () {
+                    //OBTENEMOS EL PRODUCTO SELECCIONADO CON FIND Y THIS.ID
+                    console.log('hola');
+                    // console.log(this.id)
+                    // let seleccion= preguntasGeo.find(pregunta => pregunta.q1.answer == this.id);
+                    // console.log('el producto seleccionado es '+seleccion.q1);                
+            });        
+    }
  
-       
- 
+
   
   let geoQ1 = new AlDom(preguntasGeo.q1)
   let geoQ2 = new AlDom(preguntasGeo.q2)
@@ -122,33 +136,36 @@ const respuestasGeo = {
  
   /* --------------- BUTTONS --------------- */
 
-  let geoQ = [1, 2, 3];
-    let i = 0;
+  
+  let prev = document.getElementsByClassName('prev');
+  
+
+
+  // let geoQ = [1, 2, 3];
+  //   let i = 0;
     
 
-  function sgte() {
+  // function sgte() {
    
     
-      if(i >= geoQ.length-1) i = -1;
-      i++;
-      return printIt();
+  //     if(i >= geoQ.length-1) i = -1;
+  //     i++;
+  //     return printIt();
       
-    }
+  //   }
 
-      //lo print al Dom
+  //     //lo print al Dom
       
-      function printIt(){
+  //     function printIt(){
 
-	    'geoQ' + [i].printDom() 
+	//     'geoQ' + [i].printDom() 
        
-    } 
+  //   } 
 
   
 
 
 
-    let prev = document.getElementsByClassName('prev');
-    console.log(prev);
 
   
 
