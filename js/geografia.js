@@ -42,63 +42,59 @@ const respuestasGeo = {
 }
   
 
+
+
   //selecting la tarjeta de GEO
+  let papaCardGeo = document.querySelector('.papaCardGeo')
   let cardGeo1 = document.querySelector('.cardGeo1');
 
 
-  
-
   //poniendo pregunta adentro DOM
+
+
    class AlDom {
 
     constructor(preguntas) {
       
       this.preguntas = preguntas;
-      // this.click = function( ) {
-      //   alert('funciona el metodo interno')
-      // }
-      
       
     }
-
-    // elClick(){
-    //   alert('funciona el metodo interno')
-    // }
   
 
     printDom( ) {
       cardGeo1.innerHTML =  
-  
+
+      
   `<div class="btn card_catg flex flex-col items-left py-10">
   <h2 class="font-bold mb-5">${this.preguntas.p0}</h2>
 
   <div class="flex flex-col items-left gap-5">
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternaativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas"
     >
         <p>${this.preguntas.a}</p>
     </div>
     <div
-      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternaativas"
+      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas"
     >
       <h3>${this.preguntas.b}</h3>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternaativas correct"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas correct"
     >
       <h3>${this.preguntas.c}</h3>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternaativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas"
     >
       <h3 onclick="" >${this.preguntas.d}</h3>
     </div>
 
      <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
 
-  <button class="  card_btns" onclick="sgte()" id="prev">anterior</button>
+  <button class=" prev card_btns" onclick="sgte()" >anterior</button>
 
-  <button class=" next card_btns" onclick="sgte()" >Siguiente </button>
+  <button class="  card_btns" onclick="sgte()" id="next" >Siguiente </button>
 
 </div> 
    
@@ -106,14 +102,16 @@ const respuestasGeo = {
   </div> 
 </div>`
 
+  papaCardGeo.appendChild(cardGeo1);//AGREGO UN NUEVO HIJO A BODY PARA QUE LO MUESTRE EN EL HTML
 
     }
 
 
-
   } 
 
-  
+ 
+ 
+       
  
   
   let geoQ1 = new AlDom(preguntasGeo.q1)
@@ -121,38 +119,77 @@ const respuestasGeo = {
   let geoQ3 = new AlDom(preguntasGeo.q3)
 
 
-  //declarando las preguntas
  
-
   /* --------------- BUTTONS --------------- */
 
-  // const answer_geoQ1 = document.querySelector('')
-
+  let geoQ = [1, 2, 3];
+    let i = 0;
+    
 
   function sgte() {
+   
     
-    // if (nextQ ==  ) {
+      if(i >= geoQ.length-1) i = -1;
+      i++;
+      return printIt();
       
-    // }
+    }
 
-    document.getElementById('tow').style.backgroundColor = '#60b347';
+      //lo print al Dom
+      
+      function printIt(){
 
-    geoQ2.printDom() /// con map dentro del AlDom como method - poner en DOM desde el js el click
+	    'geoQ' + [i].printDom() 
+       
+    } 
+
+  
 
 
-  } 
+
+    let prev = document.getElementsByClassName('prev');
+    console.log(prev);
 
   
 
 
-  
 
+/* --------------- Declarando preguntas en el DOM --------------- */
   geoQ1.printDom()
   
-  
+//  console.log(sgte());
+
+
 
 
   /* Geoquestions1.printDom().sgte() */ /// chain method
   
 
  
+
+  /* fuentes
+
+
+  //onclick
+  
+  https://stackoverflow.com/questions/14616253/javascript-calling-object-function-method-from-onclick-event-with-dynamic-argu 
+  
+  
+  //next/prev
+  
+  https://github.com/skcals/javascript_image_slider/blob/master/js/main.js 
+
+  https://stackoverflow.com/questions/14216024/previous-next-in-javascript 
+
+
+  
+document.getElementById('contenido').innerHTML = productos.forEach( (producto) => 
+`
+    <div>
+        <h1>${}</h1>
+    </div>
+`)
+  
+  */
+
+

@@ -28,7 +28,7 @@
         @apply bg-[#df9778] max-w-[50rem] rounded-3xl w-4/5 flex flex-col items-center justify-center mb-5 py-3;
     }
 
-    .card_alternaativas {
+    .card_alternativas {
         @apply cursor-pointer py-4 px-1 rounded-xl transition-all duration-150 ease-in-out border-2 border-cafe-TOW-O;
     }
 
