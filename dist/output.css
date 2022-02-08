@@ -506,46 +506,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.card_alternativas {
-  cursor: pointer;
-  border-radius: 0.75rem;
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(112 0 0 / var(--tw-border-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  transition-property: all;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card_btns {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  max-width: 80%;
-  border-radius: 0.75rem;
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(190 132 240 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(112 0 0 / var(--tw-text-opacity));
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .flex {
   display: flex;
 }
@@ -568,14 +528,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-center {
   justify-content: center;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-y-4 {
-  row-gap: 1rem;
 }
 
 .rounded-3xl {
@@ -636,11 +588,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:border-\[\#BE84F0\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(190 132 240 / var(--tw-border-opacity));
-}
-
 .hover\:bg-verde-TOW-O:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(68 176 11 / var(--tw-bg-opacity));
@@ -659,16 +606,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-violet-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(167 139 250 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#CABDF0\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
-}
-
-@media (min-width: 768px) {
-  .md\:flex-row {
-    flex-direction: row;
-  }
 };
 

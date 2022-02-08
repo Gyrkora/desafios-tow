@@ -1,8 +1,8 @@
 
 
 /* --------------- Informacion y saludo --------------- */
-alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
-let firstName = prompt('¿Cómo te llamas?');
+// alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
+// let firstName = prompt('¿Cómo te llamas?');
 
 
 /* --------------- Declarando arrays de objetos --------------- */
