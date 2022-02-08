@@ -136,14 +136,9 @@ function correction(id) {
 }
 
 
-/* --------------- Calcular Puntaje Total --------------- */
-// let ptjeTotal = 0
 
 function calcPtje( ) {
 
-//   for (let i = 0; i < ptje.length; ++i) {
-//       ptjeTotal += ptje[i];
-//   }
 
 if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
   console.log( 'tú puedes !' + firstName + '😊')
@@ -155,19 +150,5 @@ if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver s
   
   
 }
-
-
-
-
-
-// if (ptjeTotal <= 0) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
-//   console.log( firstName + ' tu puntaje total es ' + ptjeTotal + ' ¿Falta estudiar un poco más sobre nuestras raíces?')
-// } else if (ptjeTotal <= 1) {
-//     console.log( firstName + ' tu puntaje total es ' + ptjeTotal + ', tú puedes ! 😊')
-// } else if (ptjeTotal >= 3) {
-//   console.log( firstName + ' Wow, súper bien! Tienes 2 respuestas correctas. Al parecer sabes lo suficiente de Latinoamérica y el Caribe 😎')
-// } else {
-//   console.log( firstName + ' tu puntaje total es ' + ptjeTotal + ', sabes muchisimo sobre Latinoamérica y el Caribe. ¡Felicitaciones! 🎈🎉✨ ')
-// }
 
 
