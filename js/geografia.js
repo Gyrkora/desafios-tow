@@ -33,13 +33,6 @@ const preguntasGeo =
     
     };
   
-const respuestasGeo = {
-
-  r1: 'c',
-  r2: 'a',
-  r3: 'b'
- 
-}
   
   //selecting la tarjeta de GEO
   let papaCardGeo = document.querySelector('.papaCardGeo')
@@ -209,4 +202,8 @@ document.getElementById('contenido').innerHTML = productos.forEach( (producto) =
   
   */
 
+
+/* --------------- Informacion y saludo --------------- */
+// alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
+// let firstName = prompt('¿Cómo te llamas?');
 
