@@ -7,7 +7,10 @@ const preguntasGeo =
           b: 'B) Guatemala, Honduras, Chile y Costa Rica',
           c: 'C) Honduras, El Salvador, Haití y Costa Rica',
           d: 'D) Perú, Bolivia, Republica Dominicana y El Savador',
-          answer: 'c',
+          answer1: 'incorrecto',
+          answer2: 'incorrecto',
+          answer3: 'correcto',
+          answer4: 'incorrecto',
       } ,
     
 
@@ -18,7 +21,11 @@ const preguntasGeo =
         b: 'B) La salsa',
         c: 'C) El merengue',
         d: 'D) El tango',
-        answer: 'a',
+        answer1: 'correcto',
+        answer2: 'incorrecto',
+        answer3: 'incorrecto',
+        answer4: 'incorrecto',
+
     } ,
     
       q3: {
@@ -28,7 +35,10 @@ const preguntasGeo =
         b: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia',
         c: 'C) Bolivia, Brasil, Chile, Argentina y Paraguay',
         d: 'D) Perú es una isla',
-        answer: 'b',
+        answer1: 'incorrecto',
+        answer2: 'correcto',
+        answer3: 'incorrecto',
+        answer4: 'incorrecto',
     }
     
     };
@@ -60,22 +70,22 @@ const preguntasGeo =
 
   <div class="flex flex-col items-left gap-5 undiv">
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer1}')"
     >
         <button>${this.preguntas.a}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
+      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer2}')"
     >
       <butto >${this.preguntas.b}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer3}')"
     >
       <butto >${this.preguntas.c}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" id='${this.preguntas.answer}'"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer4}')"
     >
       <butt  onclick="" >${this.preguntas.d}</button>
     </div>
@@ -99,6 +109,8 @@ const preguntasGeo =
   } 
 
  
+
+  
   
 
     //SELECCIONAR BOTONES GENERADOS POR CLASES
@@ -134,26 +146,96 @@ const preguntasGeo =
   
 
 
-  // let geoQ = [1, 2, 3];
-  //   let i = 0;
+
+
+/* --------------- correccion --------------- */
+
+  let ptje = []
+  
+
+  /* error */
+  function error() {
+  alert('Ups, lo siento!. No es correcto 😥') 
+  }
+  
+  function correction(id) {
+  
+  if (id === 'correcto') {
+    alert('super bien, sumas 1 punto 🥰')
+    ptje.push(1);
+    console.log(ptje);
+    geoQ2.printDom()
+
+  } else if (id === 'incorrecto') {
+    error();
+  }
+  
+  console.log( 'Tu puntaje actual es: ' +
+    ptje.reduce((a, b) => a + b, 0)
+  )
+  
+  // calcPtje( )
+  
+  
+  }
+  
+  
+  
+  // function calcPtje( ) {
+  
+  
+  // if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
+  // console.log( 'tú puedes ! 😊')
+  // } else if (ptje <= 2) {
+  // console.log( ' Al parecer sabes lo suficiente de Latinoamérica y el Caribe 😎')
+  // } else {
+  // console.log( ' Sabes muchisimo sobre Latinoamérica y el Caribe. ¡Felicitaciones! 🎈🎉✨ ')
+  // }
+  
+  
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let geoQ = [1, 2, 3];
+    let i = 0;
     
 
-  // function sgte() {
+  function sgte() {
    
     
-  //     if(i >= geoQ.length-1) i = -1;
-  //     i++;
-  //     return printIt();
+      if(i >= geoQ.length-1) i = -1;
+      i++;
+      return printIt();
       
-  //   }
+    }
 
-  //     //lo print al Dom
+      //lo print al Dom
       
-  //     function printIt(){
+      function printIt(){
 
-	//     'geoQ' + [i].printDom() 
+	    return geoQ[i].printDom
+      
        
-  //   } 
+    } 
+
+    console.log(printIt())
 
   
 
