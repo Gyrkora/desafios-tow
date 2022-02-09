@@ -6,6 +6,8 @@ https://gyrkora.github.io/desafios-tow/
 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
+Hacer:
+https://www.youtube.com/watch?v=t_2PI3fHp_I 
 
 Resolver:
 
