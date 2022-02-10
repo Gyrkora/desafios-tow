@@ -1,3 +1,21 @@
+
+/* 
+
+Descripción de la sección: Quiz simple de multiple choice
+
+Algoritmos
+
+- Escribir las preguntas en el DOM
+- Corrección de respuesta correcta o incorrecta
+- Funciones de botones anterior y siguiente
+- Escribir puntaje actual
+- guardar puntaje anterior (localStorage)
+- Generar un "modal" cada vez que acerta a la pregunta
+
+*/
+
+
+/* --------------- Declarando arrays de objetos --------------- */
 const preguntasGeo = 
     {
       q1: {
@@ -44,14 +62,16 @@ const preguntasGeo =
     };
   
   
-  //selecting la tarjeta de GEO
+
+  /* --------------- Escribiendo las preguntas en el DOM --------------- */
+
+  //Seleccionando la tarjeta de GEO
   let papaCardGeo = document.querySelector('.papaCardGeo')
   let cardGeo1 = document.querySelector('.cardGeo1');
 
   
 
-
-  //poniendo pregunta adentro DOM
+  //Declarando clase para el DOM
    class AlDom {
 
     constructor(preguntas) {
@@ -102,49 +122,38 @@ const preguntasGeo =
   </div> 
 </div>`
 
-  papaCardGeo.appendChild(cardGeo1);//AGREGO UN NUEVO HIJO A BODY PARA QUE LO MUESTRE EN EL HTML
+  papaCardGeo.appendChild(cardGeo1);
 
     }
 
   } 
 
  
-
   
   
-
-    //SELECCIONAR BOTONES GENERADOS POR CLASES
-
+  /* --------------- Seleccionando los botones de las alternativas --------------- */
 
     let alternativas = document.getElementsByClassName('alternativa');
     console.log(alternativas);
 
-    
-    //ESCUCHAMOS EL EVENTO 'click' PARA CADA BOTON GENERADO
-    for (const alternativa of alternativas) {
+        for (const alternativa of alternativas) {
             alternativa.addEventListener('click', function () {
-                    //OBTENEMOS EL PRODUCTO SELECCIONADO CON FIND Y THIS.ID
-                    console.log('hola');
-                    // console.log(this.id)
-                    // let seleccion= preguntasGeo.find(pregunta => pregunta.q1.answer == this.id);
-                    // console.log('el producto seleccionado es '+seleccion.q1);                
+                    console.log('hola'); /* ---- No funciona ¿por qué?  */
+                                   
             });        
     }
  
 
-  
-  let geoQ1 = new AlDom(preguntasGeo.q1)
-  let geoQ2 = new AlDom(preguntasGeo.q2)
-  let geoQ3 = new AlDom(preguntasGeo.q3)
-
-
- 
-  /* --------------- BUTTONS --------------- */
-
-  
+  //boton anterior
   let prev = document.getElementsByClassName('prev');
   
 
+  
+  /* --------------- creando cada pregunta --------------- */
+
+  let geoQ1 = new AlDom(preguntasGeo.q1)
+  let geoQ2 = new AlDom(preguntasGeo.q2)
+  let geoQ3 = new AlDom(preguntasGeo.q3)
 
 
 
@@ -164,7 +173,7 @@ const preguntasGeo =
     alert('super bien, sumas 1 punto 🥰')
     ptje.push(1);
     console.log(ptje);
-    geoQ2.printDom()
+    geoQ2.printDom()  /* ---- hacerlo dinámico  */
 
   } else if (id === 'incorrecto') {
     error();
@@ -174,44 +183,18 @@ const preguntasGeo =
     ptje.reduce((a, b) => a + b, 0)
   )
   
-  // calcPtje( )
   
   
   }
   
+
+  /* --------------- Escribiendo pregunta 1 en el DOM --------------- */
+  geoQ1.printDom()
   
-  
-  // function calcPtje( ) {
-  
-  
-  // if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
-  // console.log( 'tú puedes ! 😊')
-  // } else if (ptje <= 2) {
-  // console.log( ' Al parecer sabes lo suficiente de Latinoamérica y el Caribe 😎')
-  // } else {
-  // console.log( ' Sabes muchisimo sobre Latinoamérica y el Caribe. ¡Felicitaciones! 🎈🎉✨ ')
-  // }
-  
-  
-  // }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* --------------- En proceso  --------------- */
 
   let geoQ = [1, 2, 3];
     let i = 0;
@@ -235,29 +218,17 @@ const preguntasGeo =
        
     } 
 
-    console.log(printIt())
-
   
 
 
-
-
-  
-
-
-
-/* --------------- Declarando preguntas en el DOM --------------- */
-  geoQ1.printDom()
+/* --------------- NOTAS TEMPORALES --------------- */
+ 
   
 //  console.log(sgte());
 
 
-
-
   /* Geoquestions1.printDom().sgte() */ /// chain method
   
-
- 
 
   /* fuentes
 
@@ -284,8 +255,4 @@ document.getElementById('contenido').innerHTML = productos.forEach( (producto) =
   
   */
 
-
-/* --------------- Informacion y saludo --------------- */
-// alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
-// let firstName = prompt('¿Cómo te llamas?');
 
