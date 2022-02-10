@@ -1,13 +1,25 @@
 
+/* 
 
-/* --------------- Informacion y saludo --------------- */
-// alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
-// let firstName = prompt('¿Cómo te llamas?');
+Descripción de la sección: Quiz simple de multiple choice
+
+Algoritmos
+
+- Escribir las preguntas en el DOM
+- Corrección de respuesta correcta o incorrecta
+- Funciones de botones anterior y siguiente
+- Escribir puntaje actual
+- guardar puntaje anterior (localStorage)
+- Generar un "modal" cada vez que acerta a la pregunta
+
+*/
 
 
 /* --------------- Declarando arrays de objetos --------------- */
-const preguntasGeo = [
+const preguntasGeo = 
     {
+      q1: {
+          
           p0: '1.- ¿Cuáles de los siguientes países son de Centroamérica?',
           a: 'A) EEUU, Chile, Costa Rica y México',
           b: 'B) Guatemala, Honduras, Chile y Costa Rica',
@@ -17,8 +29,11 @@ const preguntasGeo = [
           answer2: 'incorrecto',
           answer3: 'correcto',
           answer4: 'incorrecto',
-      },
-    {
+      } ,
+    
+
+      q2: {
+          
         p0: '2.-¿Cuál es el baile nacional de Chile?',
         a: 'A) La cueca',
         b: 'B) La salsa',
@@ -28,9 +43,11 @@ const preguntasGeo = [
         answer2: 'incorrecto',
         answer3: 'incorrecto',
         answer4: 'incorrecto',
+
     } ,
     
-    {          
+      q3: {
+            
         p0: '3.- ¿Qué países limitan Perú con ?',
         a: 'A) Chile, Argentina y Venezuela ',
         b: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia',
@@ -41,87 +58,123 @@ const preguntasGeo = [
         answer3: 'incorrecto',
         answer4: 'incorrecto',
     }
-]  
+    
+    };
   
   
-const respuestasGeo = {
 
-  rq1: {
+  /* --------------- Escribiendo las preguntas en el DOM --------------- */
 
-    a: 'c',
-    b: 'b',
-    c: 'c',
-    d: 'd'
-   
-  }
-}
-
+  //Seleccionando la tarjeta de GEO
+  let papaCardGeo = document.querySelector('.papaCardGeo')
+  let cardGeo1 = document.querySelector('.cardGeo1');
 
   
-  /* --------------- Escribiendo en el DOM --------------- */
 
+  //Declarando clase para el DOM
+   class AlDom {
 
-  //selecting la tarjeta de GEO
-  let papaCardGeo = document.getElementById('papaCardGeo')
+    constructor(preguntas) {
+      
+      this.preguntas = preguntas;
+      
+    }
   
-  //creando el elemento 
-  let contenido= document.createElement('div');//CREO EL NODO 
 
-  //escribiendo preguntas dentro del DOM
-  let cardGeo = document.getElementById("cardGeo1").innerHTML = preguntasGeo.map(
-    (pregunta) =>
+    printDom( ) {
+      cardGeo1.innerHTML =  
 
       
   `<div class="btn card_catg flex flex-col items-left py-10">
-  <h2 class="font-bold mb-5">${pregunta.p0}</h2>
+  <h2 class="font-bold mb-5">${this.preguntas.p0}</h2>
 
   <div class="flex flex-col items-left gap-5 undiv">
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa"  onClick="correction('${pregunta.answer1}')"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer1}')"
     >
-        <button  >${pregunta.a}</button>
+        <button>${this.preguntas.a}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction( '${pregunta.answer2}')"
+      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer2}')"
     >
-      <butto >${pregunta.b}</button>
+      <butto >${this.preguntas.b}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${pregunta.answer3}' )"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer3}')"
     >
-      <butto >${pregunta.c}</button>
+      <butto >${this.preguntas.c}</button>
     </div>
     <div
-      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction( '${pregunta.answer4}')"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer4}')"
     >
-      <butt  onclick="" >${pregunta.d}</button>
+      <butt  onclick="" >${this.preguntas.d}</button>
     </div>
 
      <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
 
+  <button class=" prev card_btns" onclick="sgte()" >anterior</button>
+
+  <button class="  card_btns" onclick="sgte()" id="next" >Siguiente </button>
+
 </div> 
    
+
   </div> 
-</div>`).join('');
+</div>`
+
+  papaCardGeo.appendChild(cardGeo1);
+
+    }
+
+  } 
+
+ 
+  
+  
+  /* --------------- Seleccionando los botones de las alternativas --------------- */
+
+    let alternativas = document.getElementsByClassName('alternativa');
+    console.log(alternativas);
+
+        for (const alternativa of alternativas) {
+            alternativa.addEventListener('click', function () {
+                    console.log('hola'); /* ---- No funciona ¿por qué?  */
+                                   
+            });        
+    }
+ 
+
+    //boton anterior
+    let prev = document.getElementsByClassName('prev');
+  
+
+  
+  /* --------------- creando cada pregunta --------------- */
+
+  let geoQ1 = new AlDom(preguntasGeo.q1)
+  let geoQ2 = new AlDom(preguntasGeo.q2)
+  let geoQ3 = new AlDom(preguntasGeo.q3)
 
 
 
-/* --------------- Validacion de preguntas --------------- */
+/* --------------- correccion --------------- */
 
-let ptje = []
+  let ptje = []
+  
 
-
-/* error */
-function error() {
+  /* error */
+  function error() {
   alert('Ups, lo siento!. No es correcto 😥') 
-}
-
-function correction(id) {
-
+  }
+  
+  function correction(id) {
+  
   if (id === 'correcto') {
     alert('super bien, sumas 1 punto 🥰')
     ptje.push(1);
     console.log(ptje);
+    geoQ2.printDom()  /* ---- hacerlo dinámico  */
+
   } else if (id === 'incorrecto') {
     error();
   }
@@ -129,26 +182,84 @@ function correction(id) {
   console.log( 'Tu puntaje actual es: ' +
     ptje.reduce((a, b) => a + b, 0)
   )
+  
+  
+  
+  }
+  
 
-  calcPtje( )
+  /* --------------- Escribiendo pregunta 1 en el DOM --------------- */
+  geoQ1.printDom()
+  
+
+
+
+
+/* --------------- En proceso  --------------- */
+
+  let geoQ = [1, 2, 3];
+    let i = 0;
+    
+
+  function sgte() {
+   
+    
+      if(i >= geoQ.length-1) i = -1;
+      i++;
+      return printIt();
+      
+    }
+
+      //lo print al Dom
+      
+      function printIt(){
+
+	    return geoQ[i].printDom
+      
+       
+    } 
+
+  
+
+  
+
+
+/* --------------- NOTAS TEMPORALES --------------- */
+ 
+  
+//  console.log(sgte());
+
+
+
+
+  /* Geoquestions1.printDom().sgte() */ /// chain method
+  
+
  
 
-}
+  /* fuentes
 
 
-
-function calcPtje( ) {
-
-
-if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
-  console.log( 'tú puedes !' + firstName + '😊')
-} else if (ptje <= 2) {
-  console.log( firstName + ' Al parecer sabes lo suficiente de Latinoamérica y el Caribe 😎')
-} else {
-  console.log( firstName + ' Sabes muchisimo sobre Latinoamérica y el Caribe. ¡Felicitaciones! 🎈🎉✨ ')
-}
+  //onclick
+  
+  https://stackoverflow.com/questions/14616253/javascript-calling-object-function-method-from-onclick-event-with-dynamic-argu 
   
   
-}
+  //next/prev
+  
+  https://github.com/skcals/javascript_image_slider/blob/master/js/main.js 
+
+  https://stackoverflow.com/questions/14216024/previous-next-in-javascript 
+
+
+  
+document.getElementById('contenido').innerHTML = productos.forEach( (producto) => 
+`
+    <div>
+        <h1>${}</h1>
+    </div>
+`)
+  
+  */
 
 

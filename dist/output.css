@@ -557,14 +557,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-5 {
@@ -607,6 +607,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(190 132 240 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#CABDF0\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-verde-TOW-O:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(68 176 11 / var(--tw-bg-opacity));
@@ -625,11 +630,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-violet-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(167 139 250 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#CABDF0\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 189 240 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
