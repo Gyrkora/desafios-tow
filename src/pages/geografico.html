@@ -11,64 +11,42 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
+
+
+    <!-- contenedor de tarjeta -->
+
     <div
-      class="todos-los-divs flex flex-col items-center justify-center  drop-shadow-2xl pb-5" id="papaCardGeo"
-    >
+      class="todos-los-divs flex flex-col items-center justify-center h-screen drop-shadow-2xl pb-5 papaCardGeo" id="todos"
+    > 
+
+
+    
       <div class="pb-10 text-4xl pt-3">
         <a href="../../index.html">
-          <h1>Desafios<span class="text-rojo-TOW font-bold " > TOW</span></h1>
+          <h1>Desafios<span class="text-rojo-TOW font-bold " id="tow"> TOW</span></h1>
         </a>
       </div>
-      <div class="card cardGeo1 flex flex-col items-center justify-center" id="cardGeo1">
-       
+
+      <div class="card cardGeo1 flex flex-col ">
+
+        <div class="card cardGeo1 " id="question"> <!-- pregunta --> </div>
+  
+        <div class="card cardGeo1 " id="choices"></div>
+      </div>
+      
+
+
+      </div> 
+      
+      <!-- contenedor de tarjeta -->
+
+
     
-            
-  <!-- <div class="btn card_catg flex flex-col items-left py-10">
-    <h2 class="font-bold mb-5">${pregunta.p0}</h2>
-  
-    <div class="flex flex-col items-left gap-5 undiv">
-      <div
-        class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa"  onClick="correction('${pregunta.answer1}')"
-      >
-          <button  >${pregunta.a}</button>
-      </div>
-      <div
-        class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction( '${pregunta.answer2}')"
-      >
-        <butto >${pregunta.b}</button>
-      </div>
-      <div
-        class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${pregunta.answer3}' )"
-      >
-        <butto >${pregunta.c}</button>
-      </div>
-      <div
-        class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction( '${pregunta.answer4}')"
-      >
-        <butt  onclick="" >${pregunta.d}</button>
-      </div>
-  
-       <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
-  
-  </div>  -->
-     
-    <!-- </div>  
-  </div> -->
-
-
-
-
-
-
-  
-        </div>
-
-      </div>
-    </div>
 
   
 
-    <script src="../../js/geografia.js"></script>
+    <!-- <script src="../../js/geografia.js" type="module"></script> -->
+    !-- <script src="app.js" type="module"></script> -->
+    <!-- !-- <script src="data/questions.js" type="module"></script> --> -->
   </body>
 </html>
-

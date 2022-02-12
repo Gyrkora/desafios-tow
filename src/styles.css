@@ -17,6 +17,23 @@ body {
 }
 
 
+.btns {
+    
+    padding: 2rem;
+    margin: 1rem 0 0 0;
+    border-radius: 1.6rem;
+    transition: all 150ms ease-in-out;
+    border: 2px solid #833636;
+    max-width: 80%;
+    width: 30rem;
+
+}
+
+.btns:hover {
+    background-color:#a05757;
+}
+/* @apply cursor-pointer py-4 px-1 rounded-xl transition-all duration-150 ease-in-out border-2 border-cafe-TOW-O;
+} */
 
 
 /* w-4/5 rounded-xl border-2 border-cafe-TOW-O bg-[#f1c3af] transition-all duration-150 ease-in-out */

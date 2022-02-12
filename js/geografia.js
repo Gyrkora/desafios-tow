@@ -1,17 +1,12 @@
-
 /* 
-
 Descripción de la sección: Quiz simple de multiple choice
-
 Algoritmos
-
 - Escribir las preguntas en el DOM
 - Corrección de respuesta correcta o incorrecta
 - Funciones de botones anterior y siguiente
 - Escribir puntaje actual
 - guardar puntaje anterior (localStorage)
 - Generar un "modal" cada vez que acerta a la pregunta
-
 */
 
 
@@ -70,6 +65,7 @@ const preguntasGeo =
   let cardGeo1 = document.querySelector('.cardGeo1');
 
   
+  
 
   //Declarando clase para el DOM
    class AlDom {
@@ -87,7 +83,6 @@ const preguntasGeo =
       
   `<div class="btn card_catg flex flex-col items-left py-10">
   <h2 class="font-bold mb-5">${this.preguntas.p0}</h2>
-
   <div class="flex flex-col items-left gap-5 undiv">
     <div
       class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer1}')"
@@ -109,16 +104,14 @@ const preguntasGeo =
     >
       <butt  onclick="" >${this.preguntas.d}</button>
     </div>
-
+    
      <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
-
-  <button class=" prev card_btns" onclick="sgte()" >anterior</button>
-
-  <button class="  card_btns" onclick="sgte()" id="next" >Siguiente </button>
-
+  
+     <button class=" prev card_btns" onclick="sgte()" >anterior</button>
+  
+     <button class="  card_btns" onclick="sgte()" id="next" >Siguiente </button>
 </div> 
    
-
   </div> 
 </div>`
 
@@ -144,8 +137,8 @@ const preguntasGeo =
     }
  
 
-    //boton anterior
-    let prev = document.getElementsByClassName('prev');
+  //boton anterior
+  let prev = document.getElementsByClassName('prev');
   
 
   
@@ -194,7 +187,6 @@ const preguntasGeo =
 
 
 
-
 /* --------------- En proceso  --------------- */
 
   let geoQ = [1, 2, 3];
@@ -221,8 +213,6 @@ const preguntasGeo =
 
   
 
-  
-
 
 /* --------------- NOTAS TEMPORALES --------------- */
  
@@ -230,16 +220,10 @@ const preguntasGeo =
 //  console.log(sgte());
 
 
-
-
   /* Geoquestions1.printDom().sgte() */ /// chain method
   
 
- 
-
   /* fuentes
-
-
   //onclick
   
   https://stackoverflow.com/questions/14616253/javascript-calling-object-function-method-from-onclick-event-with-dynamic-argu 
@@ -248,10 +232,7 @@ const preguntasGeo =
   //next/prev
   
   https://github.com/skcals/javascript_image_slider/blob/master/js/main.js 
-
   https://stackoverflow.com/questions/14216024/previous-next-in-javascript 
-
-
   
 document.getElementById('contenido').innerHTML = productos.forEach( (producto) => 
 `
@@ -261,5 +242,3 @@ document.getElementById('contenido').innerHTML = productos.forEach( (producto) =
 `)
   
   */
-
-
