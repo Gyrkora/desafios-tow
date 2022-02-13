@@ -4,7 +4,8 @@ import { UIgeo } from "./models/UI.js";
 import { questionsGe, questionsGr } from "./data/questions.js";
 
 
-
+alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
+let firstName = prompt('¿Cómo te llamas?');
 
 /* --------------- Escribiendo en el DOM Geo-MultipleChoice --------------- */
 
@@ -12,7 +13,7 @@ const printPage = (quiz, ui) => {
     if (quiz.isEnded()) {
         ui.showScores(quiz.score);
     } else {
-        console.log(quiz.score);
+        console.log( firstName + ', tu puntaje es: ' + quiz.score);
         ui.showQuestion(quiz.getQuestionIndex().question); //questions.[0].question
         ui.showChoices(quiz.getQuestionIndex().choices, (currentChoice) => { 
           quiz.guess(currentChoice); //question.[0].choices
