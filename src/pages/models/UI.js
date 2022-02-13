@@ -32,9 +32,6 @@ const questionHTML = document.getElementById('question');
     }
 
 
-
-   
-
 }
 
 
