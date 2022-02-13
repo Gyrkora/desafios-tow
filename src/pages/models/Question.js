@@ -28,4 +28,13 @@ class OralQuestion {
 }
 
 
-export { MultipleQuestion, OralQuestion }
+class Categorias {
+    constructor(id, url, bg) {
+        this.id = id;
+        this.url = url;
+        this.bg = bg
+    }
+}
+
+
+export { MultipleQuestion, OralQuestion, Categorias }

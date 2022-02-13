@@ -31,6 +31,10 @@ const questionHTML = document.getElementById('question');
         element.innerHTML = gameOverHTML;
     }
 
+
+
+   
+
 }
 
 
@@ -38,6 +42,11 @@ export { UIgeo }
 
 
 
+
+
+    
+    
+  
 
 
 
@@ -56,3 +65,22 @@ export { UIgeo }
     element.innerHTML = `Question ${currentIndex} of ${total}`;
   }
 */
+
+
+/* --------------- show categories con innerHTML --------------- */
+
+/*     showCategories(categories, callback) {
+        const categoriesContainer = document.getElementById('categorias');
+    
+        categoriesContainer.innerHTML = "";
+    
+        for (let i = 0; i < 4; i++) {
+            const eachCategorie = document.createElement('button');
+            eachCategorie.addEventListener('click', () => callback(console.log('hola')))
+            eachCategorie.className = 'btns',
+            eachCategorie.innerText = categorias[i].id,
+            
+            choicesContainer.append(button);     
+        }
+    }
+     */
