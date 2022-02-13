@@ -1,7 +1,7 @@
 /* Aquí se creará el "template" para identificar las preguntas y sus respuestas correctas respectivamente */
 
 
-class Question {
+class MultipleQuestion {
 
     constructor(question, choices, answer) {
         this.question = question;
@@ -15,4 +15,17 @@ class Question {
     }
 }
 
-export { Question }
+
+
+
+class OralQuestion {
+
+    constructor(question, answer) {
+        this.question = question
+        this.answer = answer
+    }
+
+}
+
+
+export { MultipleQuestion, OralQuestion }

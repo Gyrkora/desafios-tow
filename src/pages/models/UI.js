@@ -1,6 +1,6 @@
 const questionHTML = document.getElementById('question');
 
-export class UI {
+ class UIgeo {
     constructor() {}
 
     showQuestion(writtenQuestion) {
@@ -17,8 +17,6 @@ export class UI {
             button.addEventListener('click', () => callback(choices[i]));
             button.className = 'btns';
             button.innerText = choices[i];
-
-
             
             choicesContainer.append(button);     
         }
@@ -33,13 +31,22 @@ export class UI {
         element.innerHTML = gameOverHTML;
     }
 
-
-
-
-    
-
-
 }
+
+
+export { UIgeo }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* --------------- show progress? --------------- */

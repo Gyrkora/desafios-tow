@@ -22,3 +22,37 @@ export const preguntasGeo = [
 
 ];
 
+
+/* como una array por ahora */
+export const preguntasGram = [
+    {
+      qG: "¿Cómo hago el superlativo en español?",
+      answer: "el/la más + adjetivo",
+    },
+  
+    {
+      qG: "¿Qué es un verbo?",
+      answer: "Un verbo es una acción",
+    },
+  
+    {
+      qG: "Nombra 3 verbos irregulares en presente y conjúgalos en pasado",
+      answer: "querer, volar, conducir",
+    },
+  
+    {
+      qG: "Dame una oración con el pasado del subjuntivo",
+      answer: "yo no pensé que hicieras eso",
+    },
+  
+    {
+      qG: "Dame una oración usando \"me parece interesante que\" ",
+      answer: "me parece interesante que te guste tanto la berenjena",
+    },
+  
+    {
+      qG: "Crea una oración con el verbo \"soler\"",
+      answer: "Yo suelo comer mucha berenjena",
+    },
+  ];
+
