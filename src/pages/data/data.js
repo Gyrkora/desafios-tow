@@ -19,6 +19,8 @@ export const preguntasGeo = [
         answer: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia'     
     }
 
+   
+
 
 ];
 

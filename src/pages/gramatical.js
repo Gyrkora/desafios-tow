@@ -4,10 +4,8 @@ import { Quiz } from "./models/Quiz.js";
 import { UIgeo } from "./models/UI.js";
 
 
-
    /* --------------- Gramatical app --------------- */
 
-   const text = `<p>sgte</p>`;
 
    const printGram = (quiz, ui) => {
     if (quiz.isEnded()) {
@@ -16,30 +14,32 @@ import { UIgeo } from "./models/UI.js";
       ui.showQuestion(quiz.getQuestionIndex().question)
       ui.showAnwerGram(quiz.getQuestionIndex().answer)
       ui.next( () => { 
-
-        quiz.addIndex() 
-        printGram(quiz, ui);
+        // quiz.addIndex()  
+        printGram(quiz, ui)
+        console.log(quiz.getQuestionIndex().answer)
         
-      console.log(quiz.getQuestionIndex())
 
       });
-  
       
+
+  
+       
+
+
     }  
   } 
 
 
-  
   
   function gramatical() {
     const quizGram = new Quiz(questionsGr);
     const uiGram = new UIgeo();
   
     printGram(quizGram, uiGram);
+    
   }
   
-
-  gramatical()
+  gramatical();
 
 
 

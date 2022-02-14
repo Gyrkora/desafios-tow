@@ -33,11 +33,5 @@ export class Quiz {
             this.questionIndex++;    
     }
 
-   
 
-    // nextQuestion(next) {
-    //     const  btnSgte = document.getElementById('sgte');
-    //     btnSgte.addEventListener('click',  function nextQ() {
-    //         return next
-    //     }); 
 }

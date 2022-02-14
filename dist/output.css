@@ -546,14 +546,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-7 {
-  margin-bottom: 1.75rem;
-}
-
 .flex {
   display: flex;
 }

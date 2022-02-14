@@ -24,11 +24,15 @@ const  btnSgte = document.getElementById('sgte');
         }
     }
 
+    next(callback) {
+    
+        btnSgte.addEventListener('click', () => callback()) 
+        btnSgte.innerText = `sgte`;
+    }
+
     
 
     showAnwerGram(answers) {
-
-
         const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
         const answercontainer = document.createElement('div')
         const shownanswer = document.createElement('button')
@@ -36,7 +40,6 @@ const  btnSgte = document.getElementById('sgte');
             
         answerCard.innerHTML = "";
 
-    
         answerGramaticalContainer.addEventListener('click', function writeAnswer() {
             shownanswer.innerText = answers;
             shownanswer.className = 'btns'
@@ -60,22 +63,13 @@ const  btnSgte = document.getElementById('sgte');
 
   
 
-
-    next(callback) {
-    
-        btnSgte.addEventListener('click', () => callback()) 
-
-        btnSgte.innerHTML = "";
-        btnSgte.innerText = `sgte`
-    }
-
     
 }
 
 
 export { UIgeo }
 
-//`<p>sgte</p>`
+
 
 
 
