@@ -1,8 +1,8 @@
 
 
 /* --------------- Informacion y saludo --------------- */
-// alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
-// let firstName = prompt('¿Cómo te llamas?');
+alert('¿Eres de Latinoamérica o el Caribe? Vamos a ver cuánto sabes de tus raíces con tan sólo 3 preguntas')
+let firstName = prompt('¿Cómo te llamas?');
 
 
 /* --------------- Declarando arrays de objetos --------------- */
@@ -141,13 +141,12 @@ function calcPtje( ) {
 
 
 if (ptje <= 1) { ///* comparar objeto o array de paises de latinoamerica y ver si es de uno de ellxs o no */
-  console.log( 'tú puedes !' + firstName + '😊')
+  console.log( 'tú puedes ! ' + firstName + ' 😊')
 } else if (ptje <= 2) {
   console.log( firstName + ' Al parecer sabes lo suficiente de Latinoamérica y el Caribe 😎')
 } else {
   console.log( firstName + ' Sabes muchisimo sobre Latinoamérica y el Caribe. ¡Felicitaciones! 🎈🎉✨ ')
 }
-  
   
 }
 
