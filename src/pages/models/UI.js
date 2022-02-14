@@ -31,7 +31,29 @@ const questionHTML = document.getElementById('question');
         element.innerHTML = gameOverHTML;
     }
 
+  
 
+    showAnwerGram(answers) {
+        const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
+        const answerGramatical = document.getElementById('answerGramatical')
+    
+        // answerGramaticalContainer.innerHTML = "";
+
+            answerGramaticalContainer.addEventListener('click', function writeAnswer() {
+                answerGramatical.innerText = answers;
+            });
+            
+    }
+
+    // nextQuestion(next) {
+    //     const  btnSgte = document.getElementById('sgte');
+    //     btnSgte.addEventListener('click',  function nextQ() {
+    //         return next
+    //     }); 
+    
+// }
+
+    
 }
 
 
@@ -41,8 +63,12 @@ export { UIgeo }
 
 
 
-    
-    
+
+
+
+
+
+
   
 
 

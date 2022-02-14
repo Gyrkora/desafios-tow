@@ -32,19 +32,33 @@ body {
 .btns:hover {
     background-color:#a05757;
 }
-/* @apply cursor-pointer py-4 px-1 rounded-xl transition-all duration-150 ease-in-out border-2 border-cafe-TOW-O;
-} */
-
-
-/* w-4/5 rounded-xl border-2 border-cafe-TOW-O bg-[#f1c3af] transition-all duration-150 ease-in-out */
-
-/* .ejemplo {
 
    
-} */
+.answerGramatical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    width: 35rem;
+    background-color: #f8a57c;
+    height: 15rem;
+    margin-bottom: 1rem ;
+    border-radius: 1.6rem;
+    border: 1px solid #aa8e8e;
+    transition: all 1s ease-in-out;
+}
 
 
-    /* border-color: #d68b6d; */
-    /* border-color: orange; */
+.answerGramatical_btn {
+    background-color: #e08f8f;
+    padding: .7rem;
+    border-radius: 1.8rem;
+}
+
+.clase {
+    background-color: #1E8A46;
+}
+
 
 

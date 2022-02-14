@@ -12,8 +12,18 @@ import { UIgeo } from "./models/UI.js";
       ui.showScores(quiz.score);
     } else {
       ui.showQuestion(quiz.getQuestionIndex().question)
+      ui.showAnwerGram(quiz.getQuestionIndex().answer)
+      quiz.next(quiz.getQuestionIndex())
+
+      
+
+      // console.log(quiz.getQuestionIndex());
+
+
+      
     }
   } 
+
   
   
   function gramatical() {
@@ -25,6 +35,7 @@ import { UIgeo } from "./models/UI.js";
   
 
   gramatical()
+
 
 
 
