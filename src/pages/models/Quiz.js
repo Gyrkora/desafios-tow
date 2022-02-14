@@ -28,22 +28,12 @@ export class Quiz {
 
     }
 
-
-    next(elPar) {
-
-        const btnSgte = document.getElementById('sgte');
-            btnSgte.addEventListener('click',  function nextQ() {
-                console.log( elPar );
-                
-            }); 
-
-            return this.questionIndex++
-            // this.questionIndex++;
-                
-        
-      
     
+    addIndex() {
+            this.questionIndex++;    
     }
+
+   
 
     // nextQuestion(next) {
     //     const  btnSgte = document.getElementById('sgte');

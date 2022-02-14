@@ -7,22 +7,33 @@ import { UIgeo } from "./models/UI.js";
 
    /* --------------- Gramatical app --------------- */
 
+   const text = `<p>sgte</p>`;
+
    const printGram = (quiz, ui) => {
     if (quiz.isEnded()) {
       ui.showScores(quiz.score);
     } else {
       ui.showQuestion(quiz.getQuestionIndex().question)
       ui.showAnwerGram(quiz.getQuestionIndex().answer)
-      quiz.next(quiz.getQuestionIndex())
+      ui.next( () => { 
+        
+        quiz.addIndex() 
+        printGram(quiz, ui);
+        
+      console.log(quiz.getQuestionIndex())
 
+      });
+      // ui.next((`<p>sgte</p>`) 
       
 
-      // console.log(quiz.getQuestionIndex());
 
 
+      // quiz.addIndex()
+      // printGram(quiz, ui)
       
-    }
+    }  
   } 
+
 
   
   
@@ -40,6 +51,5 @@ import { UIgeo } from "./models/UI.js";
 
 
 
-// showQuestion(writtenQuestion) {
-//     questionHTML.innerHTML = writtenQuestion;
-// }
+
+   

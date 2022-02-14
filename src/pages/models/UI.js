@@ -1,4 +1,5 @@
 const questionHTML = document.getElementById('question');
+const  btnSgte = document.getElementById('sgte');
 
  class UIgeo {
     constructor() {}
@@ -45,13 +46,14 @@ const questionHTML = document.getElementById('question');
             
     }
 
-    // nextQuestion(next) {
-    //     const  btnSgte = document.getElementById('sgte');
-    //     btnSgte.addEventListener('click',  function nextQ() {
-    //         return next
-    //     }); 
+
+
+next(callback) {
     
-// }
+    btnSgte.addEventListener('click', () => callback()) 
+    // choicesContainer.innerHTML = "";
+    btnSgte.innerText = `sgte`
+}
 
     
 }
@@ -59,8 +61,7 @@ const questionHTML = document.getElementById('question');
 
 export { UIgeo }
 
-
-
+//`<p>sgte</p>`
 
 
 
