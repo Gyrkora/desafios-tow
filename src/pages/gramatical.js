@@ -16,20 +16,14 @@ import { UIgeo } from "./models/UI.js";
       ui.showQuestion(quiz.getQuestionIndex().question)
       ui.showAnwerGram(quiz.getQuestionIndex().answer)
       ui.next( () => { 
-        
+
         quiz.addIndex() 
         printGram(quiz, ui);
         
       console.log(quiz.getQuestionIndex())
 
       });
-      // ui.next((`<p>sgte</p>`) 
-      
-
-
-
-      // quiz.addIndex()
-      // printGram(quiz, ui)
+  
       
     }  
   } 

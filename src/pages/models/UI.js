@@ -1,6 +1,7 @@
 const questionHTML = document.getElementById('question');
 const  btnSgte = document.getElementById('sgte');
 
+
  class UIgeo {
     constructor() {}
 
@@ -23,6 +24,31 @@ const  btnSgte = document.getElementById('sgte');
         }
     }
 
+    
+
+    showAnwerGram(answers) {
+
+
+        const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
+        const answercontainer = document.createElement('div')
+        const shownanswer = document.createElement('button')
+        const answerCard = document.getElementById('answerCard')
+            
+        answerCard.innerHTML = "";
+
+    
+        answerGramaticalContainer.addEventListener('click', function writeAnswer() {
+            shownanswer.innerText = answers;
+            shownanswer.className = 'btns'
+        });
+        
+        answerCard.append(answercontainer)
+        answercontainer.append(shownanswer)
+            
+    }
+   
+
+
     showScores(score) {
         const gameOverHTML = `<h1>Result</h1>
                             <h2 id="score"> Your scores: ${score}</h2>`;
@@ -34,26 +60,14 @@ const  btnSgte = document.getElementById('sgte');
 
   
 
-    showAnwerGram(answers) {
-        const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
-        const answerGramatical = document.getElementById('answerGramatical')
-    
-        // answerGramaticalContainer.innerHTML = "";
 
-            answerGramaticalContainer.addEventListener('click', function writeAnswer() {
-                answerGramatical.innerText = answers;
-            });
-            
+    next(callback) {
+    
+        btnSgte.addEventListener('click', () => callback()) 
+
+        btnSgte.innerHTML = "";
+        btnSgte.innerText = `sgte`
     }
-
-
-
-next(callback) {
-    
-    btnSgte.addEventListener('click', () => callback()) 
-    // choicesContainer.innerHTML = "";
-    btnSgte.innerText = `sgte`
-}
 
     
 }
@@ -70,10 +84,21 @@ export { UIgeo }
 
 
 
+
   
 
 
+ // showAnwerGram(answers) {
+    //     const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
+    //     const answerGramatical = document.getElementById('answerGramatical')
+    
+    //     // answerGramaticalContainer.innerHTML = "";
 
+    //         answerGramaticalContainer.addEventListener('click', function writeAnswer() {
+    //             answerGramatical.innerText = answers;
+    //         });
+            
+    // }
 
 
 
