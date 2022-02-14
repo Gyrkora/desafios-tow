@@ -11,6 +11,10 @@ Resolver:
 
 los textos dentro de la tarjeta preguntas, no son responsive -- maxwidh porcentaje
 
+Mejorar:
+
+onclick functions
+
 
 Dudas:
 

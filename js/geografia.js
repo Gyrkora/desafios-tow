@@ -1,3 +1,16 @@
+/* 
+Descripción de la sección: Quiz simple de multiple choice
+Algoritmos
+- Escribir las preguntas en el DOM
+- Corrección de respuesta correcta o incorrecta
+- Funciones de botones anterior y siguiente
+- Escribir puntaje actual
+- guardar puntaje anterior (localStorage)
+- Generar un "modal" cada vez que acerta a la pregunta
+*/
+
+
+/* --------------- Declarando arrays de objetos --------------- */
 const preguntasGeo = 
     {
       q1: {
@@ -7,7 +20,10 @@ const preguntasGeo =
           b: 'B) Guatemala, Honduras, Chile y Costa Rica',
           c: 'C) Honduras, El Salvador, Haití y Costa Rica',
           d: 'D) Perú, Bolivia, Republica Dominicana y El Savador',
-          answer: 'c',
+          answer1: 'incorrecto',
+          answer2: 'incorrecto',
+          answer3: 'correcto',
+          answer4: 'incorrecto',
       } ,
     
 
@@ -18,7 +34,11 @@ const preguntasGeo =
         b: 'B) La salsa',
         c: 'C) El merengue',
         d: 'D) El tango',
-        answer: 'a',
+        answer1: 'correcto',
+        answer2: 'incorrecto',
+        answer3: 'incorrecto',
+        answer4: 'incorrecto',
+
     } ,
     
       q3: {
@@ -28,111 +48,197 @@ const preguntasGeo =
         b: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia',
         c: 'C) Bolivia, Brasil, Chile, Argentina y Paraguay',
         d: 'D) Perú es una isla',
-        answer: 'b',
+        answer1: 'incorrecto',
+        answer2: 'correcto',
+        answer3: 'incorrecto',
+        answer4: 'incorrecto',
     }
     
     };
   
-const respuestasGeo = {
-
-  r1: 'c',
-  r2: 'a',
-  r3: 'b'
- 
-}
   
 
-  //selecting la tarjeta de GEO
+  /* --------------- Escribiendo las preguntas en el DOM --------------- */
+
+  //Seleccionando la tarjeta de GEO
+  let papaCardGeo = document.querySelector('.papaCardGeo')
   let cardGeo1 = document.querySelector('.cardGeo1');
 
+  
+  
 
-
-  //poniendo pregunta adentro DOM
+  //Declarando clase para el DOM
    class AlDom {
 
     constructor(preguntas) {
-      // this.sgte = sgte
+      
       this.preguntas = preguntas;
-      // this.sgtePregunta = sgte
+      
     }
-
-    
-  
-    // sgte( ) {
-    //   this.sgte.printDom();
-    // }
   
 
-    printDom() {
+    printDom( ) {
       cardGeo1.innerHTML =  
-  
+
+      
   `<div class="btn card_catg flex flex-col items-left py-10">
   <h2 class="font-bold mb-5">${this.preguntas.p0}</h2>
-
-  <div class="flex flex-col items-left gap-5">
+  <div class="flex flex-col items-left gap-5 undiv">
     <div
-      class="hover:bg-celeste-TOW hover:border-amarillo-TOW card_alternaativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer1}')"
     >
-        <p>${this.preguntas.a}</p>
-    </div>
-    <div
-      class="hover:bg-celeste-TOW hover:border-amarillo-TOW card_alternaativas"
-    >
-      <h3>${this.preguntas.b}</h3>
+        <button>${this.preguntas.a}</button>
     </div>
     <div
-      class="hover:bg-celeste-TOW hover:border-amarillo-TOW card_alternaativas"
+      class="hover:bg-[#CABDF0]  hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer2}')"
     >
-      <h3>${this.preguntas.c}</h3>
+      <butto >${this.preguntas.b}</button>
     </div>
     <div
-      class="hover:bg-celeste-TOW hover:border-amarillo-TOW card_alternaativas"
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer3}')"
     >
-      <h3>${this.preguntas.d}</h3>
+      <butto >${this.preguntas.c}</button>
     </div>
-
-    <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
-
-              <button class=" next bg-celeste-TOW max-w-3/4 mx-auto my-0 px-8 py-2 mt-2 rounded-xl " onclick="sgte()">anterior</button>
-
-              <button class=" next bg-celeste-TOW max-w-3/4 mx-auto my-0 px-8 py-2 mt-2 rounded-xl" onclick="sgte()">Siguiente</button>
-
+    <div
+      class="hover:bg-[#CABDF0] hover:border-[#BE84F0] card_alternativas alternativa" onClick="correction('${this.preguntas.answer4}')"
+    >
+      <butt  onclick="" >${this.preguntas.d}</button>
     </div>
-
+    
+     <div class="flex flex-col justify-center items-center md:flex-row gap-y-4 " > 
+  
+     <button class=" prev card_btns" onclick="sgte()" >anterior</button>
+  
+     <button class="  card_btns" onclick="sgte()" id="next" >Siguiente </button>
+</div> 
+   
   </div> 
 </div>`
 
-
+  papaCardGeo.appendChild(cardGeo1);
 
     }
 
   } 
 
+ 
   
+  
+  /* --------------- Seleccionando los botones de las alternativas --------------- */
+
+    let alternativas = document.getElementsByClassName('alternativa');
+    console.log(alternativas);
+
+        for (const alternativa of alternativas) {
+            alternativa.addEventListener('click', function () {
+                    console.log('hola'); /* ---- No funciona ¿por qué?  */
+                                   
+            });        
+    }
+ 
+
+  //boton anterior
+  let prev = document.getElementsByClassName('prev');
+  
+
+  
+  /* --------------- creando cada pregunta --------------- */
+
   let geoQ1 = new AlDom(preguntasGeo.q1)
   let geoQ2 = new AlDom(preguntasGeo.q2)
   let geoQ3 = new AlDom(preguntasGeo.q3)
 
 
-  //declarando las preguntas
- 
 
-  /* --------------- BUTTONS --------------- */
-  function sgte() {
+/* --------------- correccion --------------- */
 
+  let ptje = []
+  
 
-
-    geoQ2.printDom() /// con map dentro del AlDom como method - poner en DOM desde el js el click
+  /* error */
+  function error() {
+  alert('Ups, lo siento!. No es correcto 😥') 
   }
+  
+  function correction(id) {
+  
+  if (id === 'correcto') {
+    alert('super bien, sumas 1 punto 🥰')
+    ptje.push(1);
+    console.log(ptje);
+    geoQ2.printDom()  /* ---- hacerlo dinámico  */
 
+  } else if (id === 'incorrecto') {
+    error();
+  }
+  
+  console.log( 'Tu puntaje actual es: ' +
+    ptje.reduce((a, b) => a + b, 0)
+  )
+  
+  
+  
+  }
+  
 
-
+  /* --------------- Escribiendo pregunta 1 en el DOM --------------- */
   geoQ1.printDom()
   
 
+
+
+/* --------------- En proceso  --------------- */
+
+  let geoQ = [1, 2, 3];
+    let i = 0;
+    
+
+  function sgte() {
+   
+    
+      if(i >= geoQ.length-1) i = -1;
+      i++;
+      return printIt();
+      
+    }
+
+      //lo print al Dom
+      
+      function printIt(){
+
+	    return geoQ[i].printDom
+      
+       
+    } 
+
   
 
+
+/* --------------- NOTAS TEMPORALES --------------- */
+ 
+  
+//  console.log(sgte());
 
 
   /* Geoquestions1.printDom().sgte() */ /// chain method
   
+
+  /* fuentes
+  //onclick
+  
+  https://stackoverflow.com/questions/14616253/javascript-calling-object-function-method-from-onclick-event-with-dynamic-argu 
+  
+  
+  //next/prev
+  
+  https://github.com/skcals/javascript_image_slider/blob/master/js/main.js 
+  https://stackoverflow.com/questions/14216024/previous-next-in-javascript 
+  
+document.getElementById('contenido').innerHTML = productos.forEach( (producto) => 
+`
+    <div>
+        <h1>${}</h1>
+    </div>
+`)
+  
+  */
