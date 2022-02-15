@@ -56,6 +56,14 @@ export const preguntasGram = [
       qG: "6.- Crea una oración con el verbo \"soler\"",
       answer: "Yo suelo comer mucha berenjena",
     },
+    {
+      qG: "7.- Crea una oración con el verbo \"soler\"",
+      answer: "Yo suelo comer mucha berenjena",
+    },
+    {
+      qG: "8.- Crea una oración con el verbo \"soler\"",
+      answer: "Yo suelo comer mucha berenjena",
+    },
   ];
 
 export const cardCategories = [

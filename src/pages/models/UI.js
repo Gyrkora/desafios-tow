@@ -24,10 +24,10 @@ const  btnSgte = document.getElementById('sgte');
         }
     }
 
-    next(callback) {
+    next(call) {
     
-        btnSgte.addEventListener('click', () => callback()) 
-        btnSgte.innerText = `sgte`;
+        btnSgte.addEventListener('click', () => call()) 
+        btnSgte.innerText = 'sgte';
     }
 
     
