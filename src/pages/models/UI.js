@@ -61,6 +61,7 @@ const  btnSgte = document.getElementById('sgte');
         element.innerHTML = gameOverHTML;
     }
 
+    
   
 
     

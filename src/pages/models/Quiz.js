@@ -34,4 +34,9 @@ export class Quiz {
     }
 
 
+    getIndex(){
+        return this.questionIndex
+    }
+
+
 }

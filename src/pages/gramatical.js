@@ -1,53 +1,35 @@
-'use strict';
+"use strict";
 
 import { questionsGr } from "./data/questions.js";
 import { Quiz } from "./models/Quiz.js";
 import { UIgeo } from "./models/UI.js";
 
+let btnSgte = document.getElementById("sgte");
 
-   /* --------------- Gramatical app --------------- */
+const quizGram = new Quiz(questionsGr);
+const uiGram = new UIgeo();
 
+let siguientePregunta = () => {
+  quizGram.addIndex();
+  printGram(quizGram, uiGram);
+};
 
-   
+const printGram = (quiz, ui) => {
+  if (quiz.isEnded()) {
+    ui.showScores(quiz.score);
+  } else {
+    ui.showQuestion(quiz.getQuestionIndex().question);
+    ui.showAnwerGram(quiz.getQuestionIndex().answer);
 
-   const printGram = (quiz, ui) => {
-    if (quiz.isEnded()) {
-      ui.showScores(quiz.score);
-    } else {
-      ui.showQuestion(quiz.getQuestionIndex().question)
-      ui.showAnwerGram(quiz.getQuestionIndex().answer)
-      ui.next( () => { 
-        quiz.addIndex()  
-        printGram(quiz, ui)
-        console.log(quiz.getQuestionIndex().question)
-      });
-    }  
-  };
-  
-  function gramatical() {
-    const quizGram = new Quiz(questionsGr);
-    const uiGram = new UIgeo();
-  
-    printGram(quizGram, uiGram);
-    
+    console.log(quiz.getIndex());
+
+    btnSgte.removeEventListener('click', siguientePregunta)
+    btnSgte.addEventListener("click", siguientePregunta);
+
+    btnSgte.innerText = "sgte";
   }
-  
-  gramatical();
+};
+
+printGram(quizGram, uiGram);
 
 
-
-
-
-
-      // ui.next( ) {
-    
-        // const  btnSgte = document.getElementById('sgte');
-        // btnSgte.addEventListener('click', function () {
-        //   quiz.addIndex()  
-        //   btnSgte.innerText = `sgte`;
-        //   console.log(quiz.getQuestionIndex().answer)
-        //   printGram(quiz, ui)
-        // }) 
-        
-    // }
-   
