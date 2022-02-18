@@ -1,7 +1,7 @@
 
 import { Quiz } from "./models/Quiz.js";
 import { UIgeo } from "./models/UI.js";
-import { questionsGe, questionsGr } from "./data/questions.js";
+import { questionsGe, questionsCult } from "./data/questions.js";
 
 
 
@@ -13,7 +13,7 @@ const printPage = (quiz, ui) => {
         ui.showScores(quiz.score);
     } else {
         console.log(quiz.score);
-        ui.showQuestion(quiz.getQuestionIndex().question); //questions.[0].question
+        ui.showQuestionImg(quiz.getQuestionIndex().question, quiz.getQuestionIndex().image); //questions.[0].question
         ui.showChoices(quiz.getQuestionIndex().choices, (currentChoice) => { 
           quiz.guess(currentChoice); //question.[0].choices
           printPage(quiz, ui);
@@ -23,7 +23,7 @@ const printPage = (quiz, ui) => {
     };
 
     function main() {
-      const quiz = new Quiz(questionsGe);
+      const quiz = new Quiz(questionsCult);
       const ui = new UIgeo();
       // geografia.innerHTML = "";
     

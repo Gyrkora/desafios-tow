@@ -20,12 +20,10 @@
 
     .card_catg {
         @apply w-4/5 rounded-xl border-2 border-cafe-TOW-O bg-[#f1c3af] transition-all duration-150 ease-in-out;
-    
     }
 
-
     .card {
-        @apply bg-[#df9778] max-w-[50rem] rounded-3xl w-4/5 flex flex-col items-center justify-center mb-5 py-3;
+        @apply bg-[#df9778] max-w-[60rem] rounded-3xl w-90% flex flex-col items-center justify-center ;
     }
 
     .card_alternativas {
@@ -33,7 +31,11 @@
     }
 
     .card_btns {
-        @apply  bg-[#CABDF0] max-w-3/4 text-cafe-TOW-O  mx-auto my-0 px-8 py-2 mt-2 rounded-xl border-[#BE84F0]  border-2;
+        @apply  bg-[#CABDF0] max-w-3/4 text-cafe-TOW-O  mx-auto my-0 px-8 py-2 rounded-xl border-[#BE84F0]  border-2;
+    }
+
+    .card_standard {
+        @apply  bg-[#df9778] max-w-[50rem] rounded-3xl w-90% flex flex-col items-center justify-center py-10
     }
 
 };

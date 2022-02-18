@@ -24,13 +24,15 @@ const  btnSgte = document.getElementById('sgte');
         }
     }
 
-    next(call) {
-    
-        btnSgte.addEventListener('click', () => call()) 
-        btnSgte.innerText = 'sgte';
+    showQuestionImg (writtenQuestion, image) {
+        questionHTML.innerHTML = 
+
+        `<img class="pb-4 rounded-3xl " src="${image}">
+        <div>${writtenQuestion}</div>`
     }
 
-    
+   
+ 
 
     showAnwerGram(answers) {
         const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
