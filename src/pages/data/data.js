@@ -127,5 +127,17 @@ export const preguntasCultura = [
 
 ]
 
-export let vocabulary = localStorage.getItem("palabrasNuevas").split(",");
+// localStorage.getItem("palabrasNuevas").split(",");
+
+
+
+export let vocabulary;
+
+if (localStorage.getItem("palabrasNuevas") === null) {
+  vocabulary = ['']
+} else {
+  vocabulary = localStorage.getItem("palabrasNuevas").split(",") 
+}
+
+// localStorage.clear()
 
