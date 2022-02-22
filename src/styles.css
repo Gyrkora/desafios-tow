@@ -63,5 +63,14 @@ body {
     background-color: #1E8A46;
 }
 
-
+.laCajita {
+    background-color: #c25454;
+    height: 3rem;
+    text-align: center;
+    max-width: 10rem;
+    width: 80%;
+    border-radius: .5rem;
+    resize: none;
+   
+}
 

@@ -25,6 +25,7 @@
     url: "src/pages/cultural.html",
     bg: "hover:bg-violet-400"
   },
+
 ];
 
 /* --------------- DOM --------------- */

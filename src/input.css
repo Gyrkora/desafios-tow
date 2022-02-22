@@ -38,5 +38,8 @@
         @apply  bg-[#df9778] max-w-[50rem] rounded-3xl w-90% flex flex-col items-center justify-center py-10
     }
 
+    .btnVocab {
+        @apply p-2 my-1 border-2 border-cafe-TOW-O rounded-xl hover:bg-teal-600 hover:text-white transition-all duration-150 text-sm }
+
 };
 

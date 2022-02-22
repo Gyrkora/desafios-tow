@@ -126,3 +126,6 @@ export const preguntasCultura = [
 
 
 ]
+
+
+export let vocabTemp = localStorage.getItem("palabrasNuevas").split(",");

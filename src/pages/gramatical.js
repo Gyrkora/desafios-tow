@@ -2,9 +2,9 @@
 
 import { questionsGr } from "./data/questions.js";
 import { Quiz } from "./models/Quiz.js";
-import { UIgeo } from "./models/UI.js";
+import { UIgeo, btnSgte } from "./models/UI.js";
+// import { vocabularioTotal } from "./cultural.js";
 
-let btnSgte = document.getElementById("sgte");
 
 const quizGram = new Quiz(questionsGr);
 const uiGram = new UIgeo();
@@ -34,17 +34,8 @@ const printGram = (quiz, ui) => {
 printGram(quizGram, uiGram);
 
 
-function getSelectionText() {
-  var text = "";
-  if (window.getSelection) {
-      text = window.getSelection().toString();
-  } else if (document.selection && document.selection.type != "Control") {
-      text = document.selection.createRange().text;
-  }
-  
-  return text;
-  
-}
-getSelectionText()
+// document.getElementById('mostrado').innerHTML = vocabularioTotal;
+
+
 
 

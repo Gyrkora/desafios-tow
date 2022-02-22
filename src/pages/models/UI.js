@@ -70,7 +70,7 @@ const  btnSgte = document.getElementById('sgte');
 }
 
 
-export { UIgeo }
+export { UIgeo, btnSgte }
 
 
 
