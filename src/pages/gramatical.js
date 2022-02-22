@@ -3,7 +3,6 @@
 import { questionsGr } from "./data/questions.js";
 import { Quiz } from "./models/Quiz.js";
 import { UIgeo, btnSgte } from "./models/UI.js";
-// import { vocabularioTotal } from "./cultural.js";
 
 
 const quizGram = new Quiz(questionsGr);
@@ -34,7 +33,6 @@ const printGram = (quiz, ui) => {
 printGram(quizGram, uiGram);
 
 
-// document.getElementById('mostrado').innerHTML = vocabularioTotal;
 
 
 

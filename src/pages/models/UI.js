@@ -55,8 +55,8 @@ const  btnSgte = document.getElementById('sgte');
 
 
     showScores(score) {
-        const gameOverHTML = `<h1>Result</h1>
-                            <h2 id="score"> Your scores: ${score}</h2>`;
+        const gameOverHTML = `
+                            <h2 id="score"> Tu Puntaje es ${score}</h2>`;
 
         const element = document.getElementById('todos');
         

@@ -33,12 +33,3 @@ const printPage = (quiz, ui) => {
     main();
 
 
- 
-
-
-    // const geografia = document.getElementById('geografia')
-    
-    // const todo = document.getElementById('todos')
-
-    // geografia.addEventListener('click', main)
-    

@@ -23,7 +23,6 @@ const printPage = (quiz, ui) => {
 function main() {
   const quiz = new Quiz(questionsCult);
   const ui = new UIgeo();
-  // geografia.innerHTML = "";
 
   printPage(quiz, ui);
 }
