@@ -19,7 +19,7 @@ const printGram = (quiz, ui) => {
   } else {
     ui.showQuestion(quiz.getQuestionIndex().question);
     ui.showAnwerGram(quiz.getQuestionIndex().answer);
-
+  
     console.log(quiz.getIndex());
 
     btnSgte.removeEventListener('click', siguientePregunta)

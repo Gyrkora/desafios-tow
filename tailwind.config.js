@@ -8,6 +8,11 @@ module.exports = {
             
 ],
   theme: {
+
+    // screens: {
+    //   'xs2': '420px',
+      
+    // },
     
     extend: {
       maxWidth: {

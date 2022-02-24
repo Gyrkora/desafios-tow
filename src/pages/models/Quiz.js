@@ -20,11 +20,10 @@ export class Quiz {
     }
 
     guess(electedChoice) {
-        if (this.getQuestionIndex().correctAnswer(electedChoice)) { /* respuesta correcta */
-            this.score++
-        }
+        this.getQuestionIndex().correctAnswer(electedChoice) && this.score++
 
-        this.questionIndex++; /* para pasar a la siguiente pregunta */
+
+        this.questionIndex++; 
 
     }
 

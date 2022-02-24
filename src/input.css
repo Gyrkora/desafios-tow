@@ -42,7 +42,13 @@
         @apply p-2 my-1 border-2 border-cafe-TOW-O rounded-xl hover:bg-teal-600 hover:text-white transition-all duration-150 text-sm }
 
     .btnRemoveWord {
-        @apply border-2 border-double border-green-800 rounded-lg px-3 hover:bg-amber-500 hover:border-orange-600 
+        @apply border-2 border-double border-green-800 rounded-lg px-3 hover:bg-amber-500 hover:border-orange-600
+    }
+
+    .card_words {
+        @apply p-[2rem] w-[90%]  max-w-[10rem] bg-red-500 m-2 rounded-md
+
+        
     }
 
 };
