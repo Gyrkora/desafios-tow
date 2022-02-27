@@ -1,7 +1,7 @@
 
 import { preguntasGeo, preguntasGram, cardCategories, preguntasCultura } from "./data.js"; /* se important las arrays de las preguntas */
 
-import { MultipleQuestion, OralQuestion, Categorias,  } from "../models/Question.js";
+import { MultipleChoice, MultipleChoiceWImage, OralQuestion, Categorias,  } from "../models/Question.js";
 
 
 /* --------------- Escribiendo preguntas Geo --------------- */
@@ -18,12 +18,12 @@ export const questionsGr = preguntasGram.map (
 
 export const questionsGe = preguntasGeo.map ( 
     (question) => 
-    new MultipleQuestion(question.question, question.choices, question.answer)
+    new MultipleChoice(question.question, question.choices, question.answer, question.text)
 )
 
 export const questionsCult = preguntasCultura.map (
     (question) =>
-    new MultipleQuestion(question.question, question.choices, question.answer, question.image)
+    new MultipleChoiceWImage(question.question, question.choices, question.answer, question.text, question.image)
 )
 
 

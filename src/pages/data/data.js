@@ -31,18 +31,23 @@ export const preguntasGeo = [
         question: '1.- ¿Cuáles de los siguientes países son de Centroamérica?',
         choices: ['A) EEUU, Chile, Costa Rica y México', 'B) Guatemala, Honduras, Chile y Costa Rica', 'C) Honduras, El Salvador, Haití y Costa Rica', 'D) Perú, Bolivia, Republica Dominicana y El Savador', ],
         answer: 'C) Honduras, El Salvador, Haití y Costa Rica',
+        text: 'Exacto, todos esos paises son de Centroamérica'
+
     },
 
     {
         question: '2.-¿Cuál es el baile nacional de Chile?',
         choices: ['A) La cueca', 'B) La salsa', 'C) El merengue', 'D) El tango' ],
         answer: 'A) La cueca',
+        text: 'En Chile todos conocen la cuenta 🎶'
     },
       
     {
-        question: '3.- ¿Qué países limitan Perú con ?',
+        question: '3.- ¿Qué países limitan con Perú  ?',
         choices: ['A) Chile, Argentina y Venezuela', 'B) Bolivia, Chile, Brasil, Ecuador y Colombia', 'C) Bolivia, Brasil, Chile, Argentina y Paraguay', 'D) Perú es una isla', ],
-        answer: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia'     
+        answer: 'B) Bolivia, Chile, Brasil, Ecuador y Colombia' , 
+        text: '¡Que bueno que sepas que Perú no es una isla! 😅'
+   
     }
 
 ];
@@ -98,7 +103,9 @@ export const preguntasCultura = [
           'C) El 25 de noviembre de 1960 comenzó la experimentación forzadas de anticonceptivos en Puerto Rico con mujeres originarias de ese país.', 
            ],
         answer: 'B) 3 hermanas activistas fueron asesinadas el mismo día durante la dictadura de Trujillo por luchar en contra del régimen.',
+        text: 'Las hermanas Trujillo siempre serán recordadas!',
         image: "../img/primerEncuentroFeminista.jpg"
+
     },
 
     {
@@ -109,7 +116,9 @@ export const preguntasCultura = [
           'C) Verdaderos pueblos de cimarrones o fugitivos africanos e indígenas que se internaron en la geografía y desarrollaron un sistema político, social y económico paralelo a los reinados.', 
            ],
         answer: 'C) Verdaderos pueblos de cimarrones o fugitivos africanos e indígenas que se internaron en la geografía y desarrollaron un sistema político, social y económico paralelo a los reinados.',
+        text: 'Todos unos loquillos 😂',
         image: "../img/cimarrones.JPG"
+
     },
       
     {
@@ -120,7 +129,9 @@ export const preguntasCultura = [
           'C) Dale con el tiki tí.', 
            ],
         answer: 'A) Dónde está mi tío Agustín.' , 
-        image: "../img/pajariTOW.jpg"   
+        text: '¿Tú puedes escuchar al tío?',
+        image: "../img/pajariTOW.jpg" 
+ 
     }
 
 

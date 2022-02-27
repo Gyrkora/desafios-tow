@@ -15,7 +15,8 @@ const printPage = (quiz, ui) => {
         console.log('tu puntaje es: ' + quiz.score);
         ui.showQuestion(quiz.getQuestionIndex().question); //questions.[0].question
         ui.showChoices(quiz.getQuestionIndex().choices, (electedChoice) => { 
-          quiz.guess(electedChoice); //question.[0].choices
+          quiz.guess(electedChoice, quiz.getQuestionIndex().text) ; 
+          //question.[0].choices
           printPage(quiz, ui);
         });
       }

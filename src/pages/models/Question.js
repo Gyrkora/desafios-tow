@@ -11,26 +11,35 @@ class Categorias {
 }
 
 
-class MultipleQuestion {
 
-    constructor(question, choices, answer, image) {
+class MultipleChoice {
+
+    constructor(question, choices, answer, text) {
         this.question = question;
         this.choices = choices;
         this.answer = answer;
-        this.image = image;
+        this.text = text;
     }
 
 
     correctAnswer(electedChoice) {
-        return electedChoice === this.answer /* true or false */
+        return electedChoice === this.answer /* true or false */  
     }
 }
 
-class OralQuestion extends MultipleQuestion {
+class MultipleChoiceWImage extends MultipleChoice {
+    constructor(question, choices, answer, text, image) {
+        super(question, choices, answer, text)
+        this.image = image
+    }
+
+}
+
+class OralQuestion extends MultipleChoice {
 
     constructor(question, answer) {
         super(question)
-        this.answer = answer
+        this.answer = answer;
     }
 
 }
@@ -39,4 +48,4 @@ class OralQuestion extends MultipleQuestion {
 
 
 
-export { MultipleQuestion, OralQuestion, Categorias }
+export { MultipleChoice, MultipleChoiceWImage, OralQuestion, Categorias }

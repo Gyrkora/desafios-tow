@@ -2,8 +2,6 @@
 import { vocabulary } from "./data/data.js";
 const showVocab = document.getElementById('showVocab');
 
-// for (let i = 0; i < showVocab.length; i++)
-//     showVocab[i] = showVocab[i].trim();
 
 showVocab.innerHTML = vocabulary.map( (word) => 
 
@@ -26,8 +24,12 @@ console.log(vocabulary);
 //eliminar espacios
 // word.replace(/\s+/g,'')
 // let btnRemoveW = document.getElementById('removeword')
+// for (let i = 0; i < showVocab.length; i++)
+//     showVocab[i] = showVocab[i].trim();
+
 
 //btn remover localstorage
 // btnRemoveW.addEventListener('click', function() {
 //     localStorage.removeItem()
 // })
+

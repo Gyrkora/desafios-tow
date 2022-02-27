@@ -14,7 +14,7 @@ const printPage = (quiz, ui) => {
       quiz.getQuestionIndex().image
     ); //questions.[0].question
     ui.showChoices(quiz.getQuestionIndex().choices, (currentChoice) => {
-      quiz.guess(currentChoice); //question.[0].choices
+      quiz.guess(currentChoice, quiz.getQuestionIndex().text); //question.[0].choices
       printPage(quiz, ui);
     });
   }
