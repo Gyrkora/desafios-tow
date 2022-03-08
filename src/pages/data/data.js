@@ -142,5 +142,5 @@ export const preguntasCultura = [
 
 export let vocabulary;
 
-vocabulary = localStorage.getItem("palabrasNuevas") === null ? vocabulary = [''] :  vocabulary = localStorage.getItem("palabrasNuevas").split(",") 
+vocabulary = localStorage.getItem("palabrasNuevas") === null ? vocabulary = [''] : vocabulary = localStorage.getItem("palabrasNuevas").split(",") 
 

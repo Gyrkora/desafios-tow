@@ -46,9 +46,11 @@
     }
 
     .card_words {
-        @apply p-[2rem] w-[90%]  max-w-[10rem] bg-red-500 m-2 rounded-md
+        @apply p-[2rem] w-[90%]  max-w-[10rem] bg-red-500 m-2 rounded-md 
+    }
 
-        
+    .definition {
+       @apply rounded-md border-2 border-double border-zinc-800 px-[1rem]
     }
 
 };
