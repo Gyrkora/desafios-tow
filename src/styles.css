@@ -39,7 +39,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 90%;
+    max-width: 95%;
     width: 35rem;
     background-color: #f8a57c;
     height: 15rem;
@@ -73,6 +73,10 @@ body {
     resize: none;
    
 }
+ 
+.asking::first-letter {
+        text-transform:capitalize;
+    }
 
 
 

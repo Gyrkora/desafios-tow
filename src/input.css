@@ -5,6 +5,17 @@
 
 
 @layer components {
+
+    .center-col {
+        @apply flex flex-col items-center justify-center;
+    }
+
+
+    .center-row {
+        @apply flex flex-row items-center justify-center;
+
+    }
+
     .btn {
 
         padding: 1rem;

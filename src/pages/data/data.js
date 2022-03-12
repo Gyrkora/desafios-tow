@@ -93,6 +93,27 @@ export const preguntasGram = [
     },
   ];
 
+export const dataPronunciation = [
+  {
+    sentence: 'el muy tumultuoso frufru del cucurucho de Uruchurtu, un gutural zulú del sur, sucumbió ante el muy usual susurro de las burbujas de púrpura del tul del tutú de Lulú.'
+  },
+  {
+    sentence: 'Pancha plancha con cuatro planchas con cuántas planchas plancha Pancha'
+  },
+  {
+    sentence: '¿Cuántos años tienes?'
+  },
+  {
+    sentence: '¿adónde está la calle Armando?'
+  },
+  {
+    sentence: '¿Cuál es el clima hoy?'
+  },
+  {
+    sentence: '¿Tiene cambio?'
+  },
+]  
+
 export const preguntasCultura = [
 
     {
@@ -137,8 +158,6 @@ export const preguntasCultura = [
 
 
 ]
-
-
 
 export let vocabulary;
 

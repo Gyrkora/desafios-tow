@@ -130,3 +130,6 @@ function removeStorage() {
 // btnRemoveW.addEventListener('click', function() {
 //     localStorage.removeItem()
 // })
+
+//localStorage.removeItem("name of localStorage variable you want to remove");
+//So you want to remove all keys except a particular key, right? For that you can do something like this var key; for (var i = 0; i < localStorage.length; i++) {   key = localStorage.key(i);    if(key != particularKey){       localStorage.removeItem(key);   } } 

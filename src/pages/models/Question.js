@@ -44,8 +44,17 @@ class OralQuestion extends MultipleChoice {
 
 }
 
+class SentencePronunciation {
+    constructor(sentence){
+        this.sentence = sentence
+    }
+
+    correctPron(userPron){
+        return userPron === this.sentence
+    }
+}
 
 
 
 
-export { MultipleChoice, MultipleChoiceWImage, OralQuestion, Categorias }
+export { MultipleChoice, MultipleChoiceWImage, OralQuestion, Categorias, SentencePronunciation }

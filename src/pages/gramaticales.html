@@ -5,44 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gramatical</title>
-    
+
     <link rel="preload" href="../styles.css" as="style" />
     <link href="../../dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-
-    
-    <div class="todos-los-divs flex flex-col items-center justify-center h-screen drop-shadow-2xl pb-5" id="todos">
-
-        <div class="pb-10 text-4xl pt-3">
-            <a href="../../index.html">
-                <h1>Desafios<span class="text-rojo-TOW font-bold"> TOW</span></h1>
-            </a>
-            
-        </div>
-        <div class=" card" id="contenedorGram"> 
-
-
-            <div class="card_standard cardGeo1 " id="question"> <!-- pregunta --> </div>
-
-            <button class="answerGramatical_btn" id="answerGramatical_btn">Mostrar Respuesta</button>
-            
-            <div id="answerCard" class="answerGramatical" >
-
-            </div>
-
-            <button class="answerGramatical_btn" id="sgte"></button>
-           
-            
-           
+    <div
+      class="todos-los-divs flex flex-col items-center justify-center drop-shadow-2xl pb-5"
+      id="todos"
+    >
+      <div class="pb-10 text-4xl pt-3">
+        <a href="../../index.html">
+          <h1>Desafios<span class="text-rojo-TOW font-bold"> TOW</span></h1>
+        </a>
+      </div>
+      <div class="card" id="contenedorGram">
+        <div class="card_standard cardGeo1" id="question">
+          <!-- pregunta -->
         </div>
 
+        <button class="answerGramatical_btn" id="answerGramatical_btn">
+          Mostrar Respuesta
+        </button>
+
+        <div id="answerCard" class="answerGramatical"></div>
+
+        <button class="answerGramatical_btn" id="sgte"></button>
+      </div>
     </div>
-
-    
 
     <script src="gramatical.js" type="module"></script>
   </body>
 </html>
-
