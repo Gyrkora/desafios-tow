@@ -1,104 +1,69 @@
-const questionHTML = document.getElementById('question');
-const  btnSgte = document.getElementById('sgte');
-const btnprev = document.getElementById('prev');
+const questionHTML = document.getElementById("question");
+const btnSgte = document.getElementById("sgte");
+const btnprev = document.getElementById("prev");
 
+class UIgeo {
+  constructor() {}
 
- class UIgeo {
-    constructor() {}
+  showQuestion(writtenQuestion) {
+    questionHTML.innerHTML = writtenQuestion;
+  }
 
-    showQuestion(writtenQuestion) {
-        questionHTML.innerHTML = writtenQuestion;
+  showChoices(choices, callback) {
+    const choicesContainer = document.getElementById("choices");
+
+    choicesContainer.innerHTML = "";
+
+    for (let i = 0; i < choices.length; i++) {
+      const button = document.createElement("button");
+      button.addEventListener("click", () => callback(choices[i]));
+      button.className = "btns";
+      button.innerText = choices[i];
+
+      choicesContainer.append(button);
     }
+  }
 
-    showChoices(choices, callback) {
-        const choicesContainer = document.getElementById('choices');
+  showQuestionImg(writtenQuestion, image) {
+    questionHTML.innerHTML = `<img class="pb-4 rounded-3xl h-[400]  max-w-lg  w-[95%] " src="${image}">
+        <div class="paddingMQ"> <h3 class="text-center">${writtenQuestion} <h3> </h3></div>`;
+  }
 
-        choicesContainer.innerHTML = "";
+  showAnwerGram(answers) {
+    const answerGramaticalContainer = document.getElementById(
+      "answerGramatical_btn"
+    );
+    const answercontainer = document.createElement("div");
+    const shownanswer = document.createElement("button");
+    const answerCard = document.getElementById("answerCard");
 
-        for (let i = 0; i < choices.length; i++) {
-            const button = document.createElement('button');
-            button.addEventListener('click', () => callback(choices[i]));
-            button.className = 'btns';
-            button.innerText = choices[i];
-            
-            choicesContainer.append(button);     
-        }
-    }
+    answerCard.innerHTML = "";
 
-    showQuestionImg (writtenQuestion, image) {
-        questionHTML.innerHTML = 
+    answerGramaticalContainer.addEventListener("click", function writeAnswer() {
+      shownanswer.innerText = answers;
+      shownanswer.className = "btns";
+    });
 
-        `<img class="pb-4 rounded-3xl " src="${image}">
-        <div>${writtenQuestion}</div>`
-    }
+    answerCard.append(answercontainer);
+    answercontainer.append(shownanswer);
+  }
 
-    showAnwerGram(answers) {
-        const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
-        const answercontainer = document.createElement('div')
-        const shownanswer = document.createElement('button')
-        const answerCard = document.getElementById('answerCard')
-            
-        answerCard.innerHTML = "";
+  showScores(score) {
+    const gameOverHTML = `
+        <div class="pb-10 text-4xl pt-3">
+        <a href="../../index.html">
+          <h1>Desafios<span class="text-rojo-TOW font-bold"> TOW </span></h1>
+        </a>
+      </div>
+    <h2 id="score"> Tu Puntaje es ${score}</h2>`;
 
-        answerGramaticalContainer.addEventListener('click', function writeAnswer() {
-            shownanswer.innerText = answers;
-            shownanswer.className = 'btns'
-        });
-        
-        answerCard.append(answercontainer)
-        answercontainer.append(shownanswer)
-            
-    }
-   
+    const element = document.getElementById("todos");
 
-
-    showScores(score) {
-        const gameOverHTML = `
-                            <h2 id="score"> Tu Puntaje es ${score}</h2>`;
-
-        const element = document.getElementById('todos');
-        
-        element.innerHTML = gameOverHTML;
-    }
-
-    
-  
-
-    
+    element.innerHTML = gameOverHTML;
+  }
 }
 
-
-export { UIgeo, btnSgte, btnprev }
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
- // showAnwerGram(answers) {
-    //     const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
-    //     const answerGramatical = document.getElementById('answerGramatical')
-    
-    //     // answerGramaticalContainer.innerHTML = "";
-
-    //         answerGramaticalContainer.addEventListener('click', function writeAnswer() {
-    //             answerGramatical.innerText = answers;
-    //         });
-            
-    // }
-
-
-
-
-
+export { UIgeo, btnSgte, btnprev };
 
 
 
@@ -110,21 +75,3 @@ export { UIgeo, btnSgte, btnprev }
   }
 */
 
-
-/* --------------- show categories con innerHTML --------------- */
-
-/*     showCategories(categories, callback) {
-        const categoriesContainer = document.getElementById('categorias');
-    
-        categoriesContainer.innerHTML = "";
-    
-        for (let i = 0; i < 4; i++) {
-            const eachCategorie = document.createElement('button');
-            eachCategorie.addEventListener('click', () => callback(console.log('hola')))
-            eachCategorie.className = 'btns',
-            eachCategorie.innerText = categorias[i].id,
-            
-            choicesContainer.append(button);     
-        }
-    }
-     */

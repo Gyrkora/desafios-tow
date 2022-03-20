@@ -3,27 +3,27 @@
 
  const cardCategories = [
   {
-    id: "gramatical",
+    id: "Gramática",
     url: "src/pages/gramaticales.html",
-    bg: "hover:bg-verde-TOW-O"
+    bg: "hover:bg-celeste-verde"
   },
 
   {
-    id: "geografico",
+    id: "Geografía",
     url: "src/pages/geografico.html",
-    bg: "hover:bg-celeste-TOW"
+    bg: "hover:bg-celeste-verde"
   },
 
   {
-    id: "pronunciacion",
+    id: "Pronunciación",
     url: "src/pages/pronunciacion.html",
-    bg: "hover:bg-cafe-TOW"
+    bg: "hover:bg-celeste-verde"
   },
 
   {
-    id: "cultural",
+    id: "Cultura",
     url: "src/pages/cultural.html",
-    bg: "hover:bg-violet-400"
+    bg: "hover:bg-celeste-verde"
   },
 
 ];

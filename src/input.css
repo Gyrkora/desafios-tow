@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 
-
-@layer components {
-
+@layer utilities {
     .center-col {
         @apply flex flex-col items-center justify-center;
     }
@@ -15,6 +13,29 @@
         @apply flex flex-row items-center justify-center;
 
     }
+
+    .paddingMQ {
+        @apply py-2;
+    }
+    
+}
+
+@layer base {
+    h1 {
+      @apply text-[2rem];
+    }
+    h2 {
+      @apply text-[1.5rem] font-mainFont;
+    }
+
+    h3 {
+       @apply  text-[1.3rem] font-mainFont
+    }
+  }
+
+@layer components {
+
+    
 
     .btn {
 
