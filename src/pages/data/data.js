@@ -95,13 +95,13 @@ export const preguntasGram = [
 
 export const dataPronunciation = [
   {
-    sentence: 'el muy tumultuoso frufru del cucurucho de Uruchurtu, un gutural zulú del sur, sucumbió ante el muy usual susurro de las burbujas de púrpura del tul del tutú de Lulú.'
+    sentence: 'la casa es roja'
   },
   {
-    sentence: 'Pancha plancha con cuatro planchas con cuántas planchas plancha Pancha'
+    sentence: 'eso es increíble'
   },
   {
-    sentence: '¿Cuántos años tienes?'
+    sentence: 'el libro está súper bueno'
   },
   {
     sentence: '¿adónde está la calle Armando?'

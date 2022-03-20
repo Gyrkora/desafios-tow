@@ -1,5 +1,6 @@
 const questionHTML = document.getElementById('question');
 const  btnSgte = document.getElementById('sgte');
+const btnprev = document.getElementById('prev');
 
 
  class UIgeo {
@@ -30,9 +31,6 @@ const  btnSgte = document.getElementById('sgte');
         `<img class="pb-4 rounded-3xl " src="${image}">
         <div>${writtenQuestion}</div>`
     }
-
-   
- 
 
     showAnwerGram(answers) {
         const answerGramaticalContainer = document.getElementById('answerGramatical_btn');
@@ -70,7 +68,7 @@ const  btnSgte = document.getElementById('sgte');
 }
 
 
-export { UIgeo, btnSgte }
+export { UIgeo, btnSgte, btnprev }
 
 
 

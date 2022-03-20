@@ -1,4 +1,6 @@
 
+import { btnprev, btnSgte } from "./UI.js";
+
 export class Quiz {
 
     /* Propiedades globales de la clase */
@@ -17,6 +19,7 @@ export class Quiz {
   
     isEnded () {
         return this.questions.length === this.questionIndex;
+        
     }
 
     guess(electedChoice, text) {
@@ -48,10 +51,20 @@ export class Quiz {
             this.questionIndex++;    
     }
 
+    minusIndex() {
+        this.questionIndex--;
+    }
 
     getIndex(){
         return this.questionIndex
     }
 
+    disabledPrevButton () {
+        this.getIndex() === 0 ? btnprev.disabled = true : btnprev.disabled = false;
+    }
+    
 
 }
+
+
+

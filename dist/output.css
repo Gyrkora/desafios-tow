@@ -663,14 +663,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
-.mt-\[2rem\] {
-  margin-top: 2rem;
-}
-
-.mb-\[1rem\] {
-  margin-bottom: 1rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -681,10 +673,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid {
   display: grid;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .grid-cols-1 {
@@ -707,12 +695,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.gap-8 {
-  gap: 2rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .gap-y-4 {
@@ -757,11 +753,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.pb-4 {
+.pb-\[1rem\] {
   padding-bottom: 1rem;
 }
 
-.pb-\[1rem\] {
+.pb-4 {
   padding-bottom: 1rem;
 }
 
@@ -776,10 +772,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-bold {
   font-weight: 700;
-}
-
-.capitalize {
-  text-transform: capitalize;
 }
 
 .text-rojo-TOW {
