@@ -81,36 +81,28 @@ export const preguntasGram = [
   
     {
       qG: "6.- Crea una oración con el verbo \"soler\"",
-      answer: "Yo suelo comer mucha berenjena",
-    },
-    {
-      qG: "7.- Crea una oración con el verbo \"soler\"",
-      answer: "Yo suelo comer mucha berenjena",
-    },
-    {
-      qG: "8.- Crea una oración con el verbo \"soler\"",
-      answer: "Yo suelo comer mucha berenjena",
-    },
+      answer: "Yo suelo hacer ejercicios por las mañanas",
+    }
   ];
 
 export const dataPronunciation = [
   {
-    sentence: 'la casa es roja'
+    sentence: 'Pepe pica piña pica piña Pepe'
   },
   {
-    sentence: 'eso es increíble'
+    sentence: 'lado ledo lido lodo ludo decirlo al revés lo dudo ludo lodo lido ledo lado que trabajo me ha costado'
   },
   {
-    sentence: 'el libro está súper bueno'
+    sentence: 'una tortuga tortura a otra tortuga tuerta que tropieza con la tuerca tras la puerta'
   },
   {
-    sentence: '¿adónde está la calle Armando?'
+    sentence: 'cómo quieres que te quiera si el que quiero no me quiere como quiero que me quiera'
   },
   {
-    sentence: '¿Cuál es el clima hoy?'
+    sentence: 'Pablito clavó un clavito en la calva de un calvito'
   },
   {
-    sentence: '¿Tiene cambio?'
+    sentence: 'el perrito de Rita me irrita por favor dile a Rita que cambie el perrito por una perrita'
   },
 ]  
 

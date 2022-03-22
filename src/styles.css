@@ -35,6 +35,26 @@ body {
     color: white;
 }
 
+
+.showAnswerGramar {
+    
+    padding: 2rem;
+    margin: 1rem 0 0 0;
+    border-radius: 1.6rem;
+    transition: all 150ms ease-in-out;
+    border: 2px solid #c25454;
+    max-width: 20rem;
+    width: 80%;
+    background-color: #f8a57c;
+}
+
+#answerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
    
 .answerGramatical {
     display: flex;
@@ -49,6 +69,8 @@ body {
     border-radius: 1.6rem;
     border: 1px solid #aa8e8e;
     transition: all 1s ease-in-out;
+    text-align: center;
+    padding: .5rem;
     
 }
 

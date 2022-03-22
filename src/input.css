@@ -67,7 +67,7 @@
     }
 
     .card_standard {
-        @apply  bg-[#df9778] max-w-[50rem] rounded-3xl w-90% flex flex-col items-center justify-center py-10
+        @apply  bg-[#df9778] max-w-[50rem] rounded-3xl w-90% flex flex-col items-center justify-center py-8
     }
 
     .btnVocab {

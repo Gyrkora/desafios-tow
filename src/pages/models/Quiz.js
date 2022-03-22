@@ -46,6 +46,10 @@ export class Quiz {
 
     }
 
+    addScore() {
+        this.score++;
+
+    }
     
     addIndex() {
             this.questionIndex++;    

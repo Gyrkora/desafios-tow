@@ -12,7 +12,7 @@ showVocab.innerHTML = vocabulary
       `<div class="flex flex-col items-center justify-center" >
 <button class="card_words"><p>${word}</p></button>
 <div class="flex flex-row items-center justify-center gap-5">
-<button class="btnRemoveWord" type="button"  id="removeWord"> ✔ </button>
+
 <button class="definition" type="button" id="def"> ¿? </button>
 </div>
 </div> 
@@ -20,7 +20,7 @@ showVocab.innerHTML = vocabulary
   )
   .join("");
 
-
+{/* <button class="btnRemoveWord" type="button"  id="removeWord"> ✔ </button> */}
  
 /* --------------- Definiendo las palabras con la API --------------- */
   
@@ -115,6 +115,10 @@ function removeStorage() {
 
 
 // const btnRemoveWord = document.getElementById('btnRemoveWord');
+
+
+
+
 
 
 

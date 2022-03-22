@@ -1,6 +1,6 @@
 import { Quiz } from "./models/Quiz.js";
-import { btnSgte, UIgeo } from "./models/UI.js";
-import { questionsGe, questionsCult } from "./data/questions.js";
+import { UIgeo } from "./models/UI.js";
+import { questionsCult } from "./data/questions.js";
 
 /* --------------- Escribiendo en el DOM Geo-MultipleChoice --------------- */
 

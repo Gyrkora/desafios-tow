@@ -24,8 +24,7 @@ let prevQuestion = () => {
 
 const printGram = (quiz, ui) => {
   if (quiz.isEnded()) {
-    ui.showScores(quiz.score);
-    console.log('finnished');
+    ui.showScoreGram();
   } else {
     ui.showQuestion(quiz.getQuestionIndex().question);
     ui.showAnwerGram(quiz.getQuestionIndex().answer);

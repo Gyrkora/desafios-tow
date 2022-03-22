@@ -20,6 +20,14 @@ document.onmouseup =
     };
 
 /* --------------- Agregando la palabra --------------- */
+function added() {
+  cajita.value = 'agregado'
+}
+function clean() {
+  cajita.value = 'selecciona palabra'
+  
+}
+
 let addingVocab = [];
 printVocab();
 
@@ -30,6 +38,9 @@ function addingWords() {
     addingVocab.push(cajita.value);
     console.log(addingVocab); //strings
     localStorage.setItem("palabrasNuevas", addingVocab);
+    setTimeout( added(cajita.value = 'agregado'), 1000)
+    setTimeout(clean, 1300)
+  
   }
   printVocab();
 }

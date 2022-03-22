@@ -83,6 +83,7 @@ const printPron = (quiz, ui) => {
           activateBtn.innerHTML = "excelente";
           activateBtn.style.backgroundColor = "transparent";
           activateBtn.innerHTML = "Repetir";
+          quiz.addScore()
 
           btnSgte.style.backgroundColor = "#c43b3b";
         } else {
@@ -110,13 +111,13 @@ deactivateBtn.addEventListener("click", () => {
   talking.innerHTML = "";
 });
 
-/* https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/call-read-api
 
 
+/* Fuentes
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/call-read-api
 https://developers.google.com/search/docs/advanced/crawling/apis-user-agent
 https://developer.mozilla.org/es/docs/Web/API/Web_Speech_API
-
-
 https://codelabs.developers.google.com/codelabs/cloud-text-speech-python3#0
 
 */

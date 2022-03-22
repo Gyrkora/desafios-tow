@@ -41,7 +41,7 @@ class UIgeo {
 
     answerGramaticalContainer.addEventListener("click", function writeAnswer() {
       shownanswer.innerText = answers;
-      shownanswer.className = "btns";
+      shownanswer.className = "showAnswerGramar";
     });
 
     answerCard.append(answercontainer);
@@ -52,7 +52,9 @@ class UIgeo {
     const gameOverHTML = `
         <div class="pb-10 text-4xl pt-3">
         <a href="../../index.html">
-          <h1>Desafios<span class="text-rojo-TOW font-bold"> TOW </span></h1>
+        <h1>
+        <span class="text-rose-900 font-medium">Desafios - </span><span class="text-rojo-TOW font-bold" id="tow"> The Other Way</span> <span class="font-bold">Spanish</span>
+      </h1>
         </a>
       </div>
     <h2 id="score"> Tu Puntaje es ${score}</h2>`;
@@ -61,6 +63,23 @@ class UIgeo {
 
     element.innerHTML = gameOverHTML;
   }
+
+
+  showScoreGram() {
+    const finishedGramHTML = `<div class="pb-10 text-4xl pt-3">
+    <a href="../../index.html">
+    <h1>
+    <span class="text-rose-900 font-medium">Desafios - </span><span class="text-rojo-TOW font-bold" id="tow"> The Other Way</span> <span class="font-bold">Spanish</span>
+  </h1>
+    </a>
+  </div>
+<h2 id="score">¿Cómo te fue? ☺</h2>`;
+
+const page = document.getElementById("todos");
+
+    page.innerHTML = finishedGramHTML;
+  }
+
 }
 
 export { UIgeo, btnSgte, btnprev };
@@ -71,7 +90,8 @@ export { UIgeo, btnSgte, btnprev };
 
 /* showProgress(currentIndex, total) {
     var element = document.getElementById("progress");
-    element.innerHTML = `Question ${currentIndex} of ${total}`;
+    // element.innerHTML = 
+   'Question currentIndex of total';
   }
 */
 
