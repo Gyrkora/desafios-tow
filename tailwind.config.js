@@ -16,7 +16,6 @@ module.exports = {
         "rojo-TOW": "#bd1212",
         "cafe-TOW": "#E3BA24",
         "cafe-TOW-O": "#700000",
-        // 'verde-TOW-O' : '#00962B',
         "verde-TOW-O": "#44B00B",
         "verde-TOW-Cl": "#0EE34A",
         "celeste-TOW": "#2499E3",
